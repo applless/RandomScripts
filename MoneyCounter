@@ -1,0 +1,16 @@
+while wait() do 
+    pcall(function()
+    local Total = 0 
+    local Cash = {}
+    for i,v in pairs (game:GetService("Workspace").Ignored.Drop:GetDescendants()) do 
+        if v.ClassName == "BillboardGui" and v.Parent.Name == "MoneyDrop" then 
+           local Amount = string.gsub(v.TextLabel.Text,"%$","")
+           table.insert(Cash,Amount)
+           for i,v in pairs(Cash) do 
+               Total = Total + v
+                 end
+             end
+        end
+    game.Players.LocalPlayer.PlayerGui.MainScreenGui.Bar.HP.TextLabel.Text = tostring(Total)
+    end)
+end
