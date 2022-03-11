@@ -68,12 +68,6 @@ local function YYBV_fake_script() -- TextBox.LocalScript
 	local script = Instance.new('LocalScript', TextBox)
 
 	script.Parent.FocusLost:Connect(function() 
-		if KRNL_LOADED then game.StarterGui:SetCore("SendNotification", {
-			Title = "FPS GUI" ,
-			Text = "FPS GUI is not supported on krnl",
-			Duration = 20
-			}) 
-			else 
 		local x = tonumber(script.Parent.Text)
 		setfpscap(x)
 	end
