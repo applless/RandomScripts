@@ -66,13 +66,12 @@ TextBox.TextSize = 30.000
 
 local function YYBV_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
-
 	script.Parent.FocusLost:Connect(function() 
 		local x = tonumber(script.Parent.Text)
 		setfpscap(x)
-	end
 	end)
 end
+
 coroutine.wrap(YYBV_fake_script)()
 local function AUGIXY_fake_script() 
 	local script = Instance.new('LocalScript', Frame)
