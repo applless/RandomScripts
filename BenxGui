@@ -1,0 +1,154 @@
+local BenxGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local TargetName = Instance.new("TextBox")
+local BenxButton = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local Stroke = Instance.new("UIStroke")
+
+
+BenxGui.Name = "BenxGui"
+BenxGui.Parent = game.CoreGui
+BenxGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = BenxGui
+Main.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Main.BorderColor3 = Color3.fromRGB(26, 26, 26)
+Main.BorderSizePixel = 5
+Main.Position = UDim2.new(0.540118873, 0, 0.419631898, 0)
+Main.Size = UDim2.new(0, 200, 0, 170)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.36, Color3.fromRGB(218, 218, 218)), ColorSequenceKeypoint.new(0.68, Color3.fromRGB(194, 194, 194)), ColorSequenceKeypoint.new(0.90, Color3.fromRGB(182, 182, 182)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(145, 145, 145))}
+UIGradient.Rotation = 90
+UIGradient.Parent = Main
+
+TargetName.Name = "TargetName"
+TargetName.Parent = Main
+TargetName.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+TargetName.BorderSizePixel = 0
+TargetName.Position = UDim2.new(0.125, 0, 0.117647059, 0)
+TargetName.Size = UDim2.new(0, 150, 0, 50)
+TargetName.Font = Enum.Font.Gotham
+TargetName.Text = ""
+TargetName.TextColor3 = Color3.fromRGB(199, 199, 199)
+TargetName.TextScaled = true
+TargetName.TextSize = 14.000
+TargetName.TextWrapped = true
+
+BenxButton.Name = "BenxButton"
+BenxButton.Parent = Main
+BenxButton.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+BenxButton.BorderSizePixel = 0
+BenxButton.Position = UDim2.new(0.125, 0, 0.570588231, 0)
+BenxButton.Size = UDim2.new(0, 150, 0, 40)
+BenxButton.Font = Enum.Font.GothamBlack
+BenxButton.Text = "Benx"
+BenxButton.TextColor3 = Color3.fromRGB(177, 177, 177)
+BenxButton.TextSize = 20.000
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0250000004, 0, 0.923529387, 0)
+TextLabel.Size = UDim2.new(0, 190, 0, 13)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "Benx script skidded from swag"
+TextLabel.TextColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel.TextSize = 13.000
+
+Stroke.Parent = Main
+Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+Stroke.Color = Color3.fromRGB(0,0,0)
+Stroke.Transparency = 0.7
+
+
+local function HRRTLDS_fake_script()
+	local script = Instance.new('LocalScript', Main)
+
+	local plr = game.Players.LocalPlayer
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+	
+	plr:GetMouse().KeyDown:connect(function(pressed)
+		if pressed == "v" then
+			if script.Parent.Visible == true then script.Parent.Visible = false 
+				else script.Parent.Visible = true
+			end
+		end
+	end)
+end
+coroutine.wrap(HRRTLDS_fake_script)()
+local function NFUOTQM_fake_script() 
+	local script = Instance.new('LocalScript', TargetName)
+
+	script.Parent.FocusLost:connect(function()
+		for i,v in pairs(game.Players:GetChildren()) do
+			if (string.sub(string.lower(v.Name),1,string.len(script.Parent.Text))) == string.lower(script.Parent.Text) then
+				script.Parent.Text = v.Name
+			end
+		end
+	end)
+end
+coroutine.wrap(NFUOTQM_fake_script)()
+local function LNLN_fake_script()
+	local script = Instance.new('LocalScript', BenxButton)
+
+	local plr = game.Players.LocalPlayer
+	bending = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Text == "Benx" then	
+			bending = true
+			script.Parent.Text = "Unbenx"
+			
+	local target = script.Parent.Parent.TargetName.Text
+	local Crouch = plr.Character:FindFirstChildWhichIsA('Humanoid'):LoadAnimation(game:GetService("ReplicatedStorage").ClientAnimations.Crouching)
+	Crouch.Looped = true
+	Crouch:Play()
+	local away = .5
+	local reversing = false
+	local shirt = plr.Character:FindFirstChild('Shirt')
+	local pants = plr.Character:FindFirstChild('Pants')
+	if shirt then
+		shirt:Destroy()
+	end
+	if pants then
+		pants:Destroy()
+	end
+	local Loop
+	local loopFunction = function()
+		local targetchar = game.Workspace.Players:FindFirstChild(target) or game.Workspace:FindFirstChild(target)
+		local character = plr.Character
+		if targetchar then
+			if reversing == true then
+				away = away - 0.1
+			else
+				away = away + 0.1
+			end
+			if away >= 2 then
+				reversing = true
+			elseif away < 0.5 then
+				reversing = false
+			end
+			character.HumanoidRootPart.CFrame = game.Players[target].Character.HumanoidRootPart.CFrame + game.Players[target].Character.HumanoidRootPart.CFrame.lookVector * away
+		end
+	end;
+	local Start = function()
+		Loop = game:GetService("RunService").Heartbeat:Connect(loopFunction);
+	end;
+	local Pause = function()
+		Loop:Disconnect()
+		Crouch:Stop()
+	end;
+	Start()	
+	repeat wait() until bending == false
+	Pause()
+		else if script.Parent.Text == "Unbenx" then
+				bending = false
+				script.Parent.Text = "Benx"
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(LNLN_fake_script)()
