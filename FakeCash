@@ -1,0 +1,101 @@
+local FakeCash = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local TopText = Instance.new("TextLabel")
+local UIGradient_2 = Instance.new("UIGradient")
+local Amount = Instance.new("TextBox")
+local DropButton = Instance.new("TextButton")
+local Info = Instance.new("TextLabel")
+local Stroke = Instance.new("UIStroke")
+FakeCash.Name = "FakeCash"
+FakeCash.Parent = game.CoreGui
+FakeCash.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Main.Name = "Main"
+Main.Parent = FakeCash
+Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Main.BorderColor3 = Color3.fromRGB(31, 31, 31)
+Main.BorderSizePixel = 5
+Main.Position = UDim2.new(0.234254986, 0, 0.375460118, 0)
+Main.Size = UDim2.new(0, 169, 0, 130)
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.31, Color3.fromRGB(232, 232, 232)), ColorSequenceKeypoint.new(0.71, Color3.fromRGB(226, 226, 226)), ColorSequenceKeypoint.new(0.89, Color3.fromRGB(209, 209, 209)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(202, 202, 202))}
+UIGradient.Rotation = 90
+UIGradient.Parent = Main
+TopText.Name = "TopText"
+TopText.Parent = Main
+TopText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TopText.BackgroundTransparency = 1.000
+TopText.Size = UDim2.new(0, 169, 0, 22)
+TopText.Font = Enum.Font.GothamBlack
+TopText.Text = "Fake Cash"
+TopText.TextColor3 = Color3.fromRGB(16, 16, 16)
+TopText.TextSize = 20.000
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.15, Color3.fromRGB(239, 239, 239)), ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.52, Color3.fromRGB(203, 203, 203)), ColorSequenceKeypoint.new(0.66, Color3.fromRGB(241, 241, 241)), ColorSequenceKeypoint.new(0.88, Color3.fromRGB(188, 188, 188)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_2.Parent = TopText
+Amount.Name = "Amount"
+Amount.Parent = Main
+Amount.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Amount.BorderSizePixel = 0
+Amount.Position = UDim2.new(0.202662721, 0, 0.239366516, 0)
+Amount.Size = UDim2.new(0, 100, 0, 40)
+Amount.Font = Enum.Font.Gotham
+Amount.Text = "Amount"
+Amount.TextColor3 = Color3.fromRGB(120, 120, 120)
+Amount.TextSize = 14.000
+DropButton.Name = "DropButton"
+DropButton.Parent = Main
+DropButton.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+DropButton.BorderSizePixel = 0
+DropButton.Position = UDim2.new(0.202662721, 0, 0.54389143, 0)
+DropButton.Size = UDim2.new(0, 100, 0, 30)
+DropButton.Font = Enum.Font.GothamBold
+DropButton.Text = "Drop"
+DropButton.TextColor3 = Color3.fromRGB(120, 120, 120)
+DropButton.TextSize = 14.000
+Info.Name = "Info"
+Info.Parent = Main
+Info.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info.BackgroundTransparency = 1.000
+Info.Position = UDim2.new(0, 0, 0.843891382, 0)
+Info.Size = UDim2.new(0, 80, 0, 20)
+Info.Font = Enum.Font.Gotham
+Info.Text = " V to toggle"
+Info.TextColor3 = Color3.fromRGB(120, 120, 120)
+Info.TextSize = 12.000
+Info.TextTransparency = 0.500
+Info.TextWrapped = true
+Info.TextXAlignment = Enum.TextXAlignment.Left
+Stroke.Parent = Main
+Stroke.Transparency = 0.6
+local function JTNSBE_fake_script() -- DropButton.LocalScript 
+	local script = Instance.new('LocalScript', DropButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for _,v in pairs(game.Workspace.Ignored.Drop:GetDescendants()) do v:Destroy() end
+		game:GetService("ReplicatedStorage").MainEvent:FireServer("DropMoney","10000")
+		X = 0 
+		wait(2)
+		repeat
+			wait()
+			local Duped = game.Workspace.Ignored.Drop:FindFirstChild("MoneyDrop"):Clone()
+			Duped.Parent = game.Workspace.Ignored.Drop
+			Duped.BillboardGui.TextLabel.Text = "$7000"
+			Duped.Position = game.Workspace.Ignored.Drop:FindFirstChild("MoneyDrop").Position + Vector3.new(0,10,0)
+			X = X + 1 
+		until X == tonumber(script.Parent.Parent.Amount.Text)
+	end)
+end
+coroutine.wrap(JTNSBE_fake_script)()
+local function DYMH_fake_script() -- Main.DragAndToggle 
+	local script = Instance.new('LocalScript', Main)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+	
+	game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(nigger)
+		if nigger == "v" then 
+			if script.Parent.Visible == true then script.Parent.Visible = false else script.Parent.Visible = true
+		end
+		end
+		end)
+end
+coroutine.wrap(DYMH_fake_script)()
