@@ -78,7 +78,7 @@ local function JTNSBE_fake_script() -- DropButton.LocalScript
 			wait()
 			local Duped = game.Workspace.Ignored.Drop:FindFirstChild("MoneyDrop"):Clone()
 			Duped.Parent = game.Workspace.Ignored.Drop
-			Duped.BillboardGui.TextLabel.Text = "$7000"
+			Duped.BillboardGui.TextLabel.Text = "$7.000"
 			Duped.Position = game.Workspace.Ignored.Drop:FindFirstChild("MoneyDrop").Position + Vector3.new(0,10,0)
 			X = X + 1 
 		until X == tonumber(script.Parent.Parent.Amount.Text)
