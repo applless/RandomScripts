@@ -103,14 +103,6 @@ AddPlr(NewPlr.Name)
 warn("Added "..NewPlr.Name.." to the list")
 end)
 
-game.Players.PlayerRemoving:Connect(function(LeavingPlr)
-for i,v in pairs(List:GetChildren()) do 
-if v.Name == "LeavingPlr" then 
-v:Destroy() 
-warn("Removed "..LeavingPlr.Name.." from the list")
-end
-end
-end)
 
 game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
 	if key == "v" then if Frame.Visible == true then Frame.Visible = false else Frame.Visible = true 
