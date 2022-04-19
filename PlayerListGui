@@ -100,12 +100,14 @@ repeat wait() until game.Players:FindFirstChild(NewPlr).Character
 repeat wait() until game.Players:FindFirstChild(NewPlr).Character:FindFirstChild("FULLY_LOADED_CHAR")
 wait(1)
 AddPlr(NewPlr.Name)
+warn("Added "..NewPlr.Name.." to the list")
 end)
 
 game.Players.PlayerRemoving:Connect(function(LeavingPlr)
 for i,v in pairs(List:GetChildren()) do 
 if v.Name == "LeavingPlr" then 
 v:Destroy() 
+warn("Removed "..LeavingPlr.Name.." from the list")
 end
 end
 end)
