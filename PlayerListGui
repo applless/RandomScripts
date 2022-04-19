@@ -40,6 +40,7 @@ local function AddPlr(PlrName)
 	local GoTo = Instance.new("TextButton")
 	local Wallet = Instance.new("TextLabel")
 	Frame.Parent = List
+	Frame.Name = PlrName
 	Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	Frame.BackgroundTransparency = 0.800
 	Frame.BorderSizePixel = 0
@@ -93,6 +94,21 @@ for i,v in pairs(game.Players:GetChildren()) do
 		AddPlr(v.Name)
 	end
 end
+
+game.Players.PlayerAdded:Connect(function(NewPlr)
+repeat wait() until game.Players:FindFirstChild(NewPlr).Character
+repeat wait() until game.Players:FindFirstChild(NewPlr).Character:FindFirstChild("FULLY_LOADED_CHAR")
+wait(1)
+AddPlr(NewPlr.Name)
+end)
+
+game.Players.PlayerRemoving:Connect(function(LeavingPlr)
+for i,v in pairs(List:GetChildren()) do 
+if v.Name == "LeavingPlr" then 
+v:Destroy() 
+end
+end
+end)
 
 game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
 	if key == "v" then if Frame.Visible == true then Frame.Visible = false else Frame.Visible = true 
