@@ -1,0 +1,164 @@
+local AutocrateGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Body = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local Amount = Instance.new("TextBox")
+local BuyButton = Instance.new("TextButton")
+local AutoOpenToggle = Instance.new("TextButton")
+local Toggle = Instance.new("Frame")
+AutocrateGui.Name = "AutocrateGui"
+AutocrateGui.Parent = game:GetService("CoreGui")
+AutocrateGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Main.Name = "Main"
+Main.Parent = AutocrateGui
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.Position = UDim2.new(0.295690924, 0, 0.390184045, 0)
+Main.Size = UDim2.new(0, 200, 0, 160)
+Body.Name = "Body"
+Body.Parent = Main
+Body.AnchorPoint = Vector2.new(0.5, 0.5)
+Body.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Body.BorderSizePixel = 0
+Body.Position = UDim2.new(0.5, 0, 0.5, 0)
+Body.Size = UDim2.new(0, 196, 0, 156)
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.24, Color3.fromRGB(234, 234, 234)), ColorSequenceKeypoint.new(0.47, Color3.fromRGB(207, 207, 207)), ColorSequenceKeypoint.new(0.78, Color3.fromRGB(190, 190, 190)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(115, 115, 115))}
+UIGradient.Rotation = 90
+UIGradient.Parent = Body
+Amount.Name = "Amount"
+Amount.Parent = Body
+Amount.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+Amount.BorderSizePixel = 0
+Amount.Position = UDim2.new(0.142857149, 0, 0.480769217, 0)
+Amount.Size = UDim2.new(0, 140, 0, 45)
+Amount.Font = Enum.Font.GothamBold
+Amount.Text = "Amount"
+Amount.TextColor3 = Color3.fromRGB(255, 255, 255)
+Amount.TextSize = 14.000
+BuyButton.Name = "BuyButton"
+BuyButton.Parent = Body
+BuyButton.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+BuyButton.Position = UDim2.new(0.295918375, 0, 0.807692349, 0)
+BuyButton.Size = UDim2.new(0, 80, 0, 25)
+BuyButton.Font = Enum.Font.GothamBold
+BuyButton.Text = "Buy"
+BuyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+BuyButton.TextSize = 14.000
+AutoOpenToggle.Name = "AutoOpenToggle"
+AutoOpenToggle.Parent = Body
+AutoOpenToggle.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+AutoOpenToggle.Position = UDim2.new(0.142857149, 0, 0.115384653, 0)
+AutoOpenToggle.Size = UDim2.new(0, 110, 0, 35)
+AutoOpenToggle.Font = Enum.Font.GothamBold
+AutoOpenToggle.Text = "Autoopen"
+AutoOpenToggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoOpenToggle.TextSize = 14.000
+Toggle.Name = "Toggle"
+Toggle.Parent = AutoOpenToggle
+Toggle.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+Toggle.Position = UDim2.new(1.00000024, 0, 0, 0)
+Toggle.Size = UDim2.new(0, 30, 0, 35)
+local Stroke = Instance.new("UIStroke",Main)
+local Stroke2 = Instance.new("UIStroke",Body)
+local Stroke3 = Instance.new("UIStroke",Amount)
+Stroke3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+local Stroke4 = Instance.new("UIStroke",BuyButton)
+Stroke4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+local Stroke5 = Instance.new("UIStroke",AutoOpenToggle)
+Stroke5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+local Stroke6 = Instance.new("UIStroke",Toggle)
+Stroke6.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+Stroke6.Color = Color3.fromRGB(255,0,0)
+Stroke6.Thickness = 2
+
+local plr = game:GetService("Players").LocalPlayer
+
+--//
+plr:GetMouse().KeyDown:Connect(function(KeyPressed)
+	if KeyPressed == "v" then 
+		Main.Visible = not Main.Visible
+	end
+end)
+--\\
+
+
+--//
+local UserInputService = game:GetService("UserInputService")
+local gui = Main
+local dragging
+local dragInput
+local dragStart
+local startPos
+local function update(input)
+	local delta = input.Position - dragStart
+	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+gui.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		dragging = true
+		dragStart = input.Position
+		startPos = gui.Position
+
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+gui.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		dragInput = input
+	end
+end)
+UserInputService.InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		update(input)
+	end
+end)
+--\\
+
+
+--//
+BuyButton.MouseButton1Click:Connect(function()
+	local Amount = tonumber(Amount.Text)
+	local Bought = 0
+	repeat 
+		game:GetService("ReplicatedStorage").MainEvent:FireServer("PurchaseSkinCrate", false)
+		wait(2)
+		Bought = Bought + 1
+	until Bought == Amount
+end)
+--\\
+
+
+--//
+AutoOpenToggle.MouseButton1Click:Connect(function()
+	if Stroke6.Color == Color3.fromRGB(255,0,0) then 
+		Stroke6.Color = Color3.fromRGB(0,255,0) else 
+		Stroke6.Color = Color3.fromRGB(255,0,0) 
+	end
+end)
+--\\
+
+
+--// 
+game:GetService("RunService").Stepped:Connect(function()
+	if Stroke6.Color == Color3.fromRGB(0,255,0) then
+		local Skip = plr.PlayerGui.MainScreenGui.WeaponSkinsGUI.Body.Wrapper.CrateOpening.Skip
+		local events = { "MouseButton1Click", "MouseButton1Down", "Activated" }
+		for i,v in next, events do firesignal(Skip[v]) 
+		end
+	end
+end)
+--\\
+
+
+--//
+local vu = game:GetService("VirtualUser")
+
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+	vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	wait(1)
+	vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+--\\
