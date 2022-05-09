@@ -1,0 +1,1 @@
+local plr = game.Players.LocalPlayer plr.Chatted:Connect(function(word) if word == "/savepos" then 	local pos = plr.Character.HumanoidRootPart.CFrame pos = tostring(pos) pos = pos:split(" ") setclipboard(pos[1].." "..pos[2].." "..string.gsub(pos[3],",",""))end end)  
