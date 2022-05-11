@@ -1,0 +1,1 @@
+while true do for a,b in pairs(game:GetService("Players"):GetChildren())do if b.Name~=game.Players.LocalPlayer.Name then if b and b.Character and b.Character:FindFirstChildWhichIsA("Humanoid")then b.Character.Humanoid.DisplayName=b.Name;b.DisplayName=b.Name end end end;wait(.1)end
