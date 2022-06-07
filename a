@@ -1,2 +1,1 @@
-local cord,uid="czopek#7877","447762694473252894"
-return cord,uid
+return {cord = "czopek#7877",uid = "447762694473252894"}
