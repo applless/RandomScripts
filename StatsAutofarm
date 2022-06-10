@@ -1,6 +1,6 @@
 game.Players.LocalPlayer.Character.Humanoid.Health = 0 
 
-repeat wait() until game.Players.LocalPlayer.Character.Humanoid.Health ~= 0 
+repeat wait() until game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid") and game.Players.LocalPlayer.Character.Humanoid.Health ~= 0 
 
 local ScreenGui = Instance.new("ScreenGui")
 local Back = Instance.new("Frame")
