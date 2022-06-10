@@ -254,10 +254,11 @@ game:GetService("RunService").Stepped:Connect(function()
 			plr.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-253.618286, 42.6555252, -110.352257)
 			BoughtWeights = false
 		end
-		plr.Character:FindFirstChild("[HeavyWeights]"):Activate()
-		plr.Character:FindFirstChild("[Weights]"):Activate()
-		plr.Character:FindFirstChild("[HeavyWeights]"):Deactivate()
-		plr.Character:FindFirstChild("[Weights]"):Deactivate()
+		for i,v in pairs(plr.Character:GetChildren()) do 
+			if v.Name == "[HeavyWeights]" or v.Name == "[Weights]" then
+				v:Activate()
+			end
+		end
 	end
 	
 	if AutoLettuce.ImageColor3 == G then 
