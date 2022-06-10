@@ -1,1 +1,290 @@
-local a=Instance.new("ScreenGui")local b=Instance.new("Frame")local c=Instance.new("Frame")local d=Instance.new("Frame")local e=Instance.new("ImageButton")local f=Instance.new("Frame")local g=Instance.new("ImageButton")local h=Instance.new("Frame")local i=Instance.new("ImageButton")local j=Instance.new("TextLabel")local k=Instance.new("TextLabel")local l=Instance.new("TextLabel")a.Parent=game:GetService("CoreGui")a.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;b.Name="Back"b.Parent=a;b.AnchorPoint=Vector2.new(0.5,0.5)b.BackgroundColor3=Color3.fromRGB(255,255,255)b.BorderColor3=Color3.fromRGB(0,0,0)b.Position=UDim2.new(0.162704304,0,0.340490788,0)b.Size=UDim2.new(0,150,0,95)c.Name="Main"c.Parent=b;c.AnchorPoint=Vector2.new(0.5,0.5)c.BackgroundColor3=Color3.fromRGB(20,20,20)c.BorderColor3=Color3.fromRGB(0,0,0)c.Position=UDim2.new(0.5,0,0.5,0)c.Size=UDim2.new(0,146,0,91)d.Name="ButtonBack"d.Parent=c;d.BackgroundColor3=Color3.fromRGB(255,255,255)d.BorderColor3=Color3.fromRGB(0,0,0)d.Position=UDim2.new(0.058252424,0,0.0500000007,0)d.Size=UDim2.new(0,25,0,25)e.Name="AutoWeight"e.Parent=d;e.AnchorPoint=Vector2.new(0.5,0.5)e.BackgroundColor3=Color3.fromRGB(98,17,0)e.BorderColor3=Color3.fromRGB(0,0,0)e.Position=UDim2.new(0.5,0,0.5,0)e.Size=UDim2.new(0,21,0,21)e.Image="rbxasset://textures/ui/GuiImagePlaceholder.png"e.ImageColor3=Color3.fromRGB(84,0,0)e.ZIndex=10;f.Name="ButtonBack"f.Parent=c;f.BackgroundColor3=Color3.fromRGB(255,255,255)f.BorderColor3=Color3.fromRGB(0,0,0)f.Position=UDim2.new(0.0579999983,0,0.370000005,0)f.Size=UDim2.new(0,25,0,25)g.Name="AutoBox"g.Parent=f;g.AnchorPoint=Vector2.new(0.5,0.5)g.BackgroundColor3=Color3.fromRGB(98,17,0)g.BorderColor3=Color3.fromRGB(0,0,0)g.Position=UDim2.new(0.5,0,0.5,0)g.Size=UDim2.new(0,21,0,21)g.Image="rbxasset://textures/ui/GuiImagePlaceholder.png"g.ImageColor3=Color3.fromRGB(84,0,0)g.ZIndex=10;h.Name="ButtonBack"h.Parent=c;h.BackgroundColor3=Color3.fromRGB(255,255,255)h.BorderColor3=Color3.fromRGB(0,0,0)h.Position=UDim2.new(0.0579999983,0,0.699999988,0)h.Size=UDim2.new(0,25,0,25)i.Name="AutoLettuce"i.Parent=h;i.AnchorPoint=Vector2.new(0.5,0.5)i.BackgroundColor3=Color3.fromRGB(98,17,0)i.BorderColor3=Color3.fromRGB(0,0,0)i.Position=UDim2.new(0.5,0,0.5,0)i.Size=UDim2.new(0,21,0,21)i.Image="rbxasset://textures/ui/GuiImagePlaceholder.png"i.ImageColor3=Color3.fromRGB(84,0,0)i.ZIndex=10;j.Parent=c;j.BackgroundColor3=Color3.fromRGB(255,255,255)j.BackgroundTransparency=1.000;j.BorderColor3=Color3.fromRGB(27,42,53)j.Position=UDim2.new(0.213592231,0,0.0500000007,0)j.Size=UDim2.new(0,150,0,21)j.Font=Enum.Font.RobotoMono;j.Text=" AutoWeight"j.TextColor3=Color3.fromRGB(255,255,255)j.TextSize=15.000;j.TextStrokeTransparency=0.000;j.TextXAlignment=Enum.TextXAlignment.Left;k.Parent=c;k.BackgroundColor3=Color3.fromRGB(255,255,255)k.BackgroundTransparency=1.000;k.BorderColor3=Color3.fromRGB(27,42,53)k.Position=UDim2.new(0.213592231,0,0.370000005,0)k.Size=UDim2.new(0,150,0,21)k.Font=Enum.Font.RobotoMono;k.Text=" AutoBox"k.TextColor3=Color3.fromRGB(255,255,255)k.TextSize=15.000;k.TextStrokeTransparency=0.000;k.TextXAlignment=Enum.TextXAlignment.Left;l.Parent=c;l.BackgroundColor3=Color3.fromRGB(255,255,255)l.BackgroundTransparency=1.000;l.BorderColor3=Color3.fromRGB(27,42,53)l.Position=UDim2.new(0.213592231,0,0.699999988,0)l.Size=UDim2.new(0,150,0,21)l.Font=Enum.Font.RobotoMono;l.Text=" AutoLettuce"l.TextColor3=Color3.fromRGB(255,255,255)l.TextSize=15.000;l.TextStrokeTransparency=0.000;l.TextXAlignment=Enum.TextXAlignment.Left;local m=game:GetService("UserInputService")local n=b;local o;local p;local q;local r;local function s(t)local u=t.Position-q;n.Position=UDim2.new(r.X.Scale,r.X.Offset+u.X,r.Y.Scale,r.Y.Offset+u.Y)end;n.InputBegan:Connect(function(t)if t.UserInputType==Enum.UserInputType.MouseButton1 or t.UserInputType==Enum.UserInputType.Touch then o=true;q=t.Position;r=n.Position;t.Changed:Connect(function()if t.UserInputState==Enum.UserInputState.End then o=false end end)end end)n.InputChanged:Connect(function(t)if t.UserInputType==Enum.UserInputType.MouseMovement or t.UserInputType==Enum.UserInputType.Touch then p=t end end)m.InputChanged:Connect(function(t)if t==p and o then s(t)end end)local v=game:GetService("Players")local w=v.LocalPlayer;local x=w:FindFirstChild("Character")local y=false;local z=Color3.fromRGB(84,0,0)local A=Color3.fromRGB(6,94,0)w:GetMouse().KeyDown:Connect(function(B)if B=="v"then b.Visible=not b.Visible end end)g.MouseButton1Click:Connect(function()if g.ImageColor3==z then g.ImageColor3=A;e.ImageColor3=z;i.ImageColor3=z;y=false;w.Character:FindFirstChild("HumanoidRootPart").CFrame=CFrame.new(-384.953857,42.8630886,-287.246124)for C,D in pairs(w.Character:GetChildren())do if D:IsA("Tool")and D.Name=="[HeavyWeights]"then D.Parent=w.Backpack end end else g.ImageColor3=z end end)e.MouseButton1Click:Connect(function()if e.ImageColor3==z then e.ImageColor3=A;g.ImageColor3=z;i.ImageColor3=z;if not w.Backpack:FindFirstChild("[HeavyWeights]")or not w.Character:FindFirstChild("[HeavyWeights]")then w.Character:FindFirstChild("HumanoidRootPart").CFrame=CFrame.new(-47.2154503,24.5633602,-650.398682)wait(2)fireclickdetector(workspace.Ignored.Shop["[HeavyWeights] - $250"].ClickDetector)wait(.8)fireclickdetector(workspace.Ignored.Shop["[HeavyWeights] - $250"].ClickDetector)wait(.8)y=true end else e.ImageColor3=z;y=false;w.Character:FindFirstChild("HumanoidRootPart").CFrame=CFrame.new(-384.953857,42.8630886,-287.246124)for C,D in pairs(w.Character:GetChildren())do if D:IsA("Tool")and D.Name=="[HeavyWeights]"then D.Parent=w.Backpack end end end end)i.MouseButton1Click:Connect(function()if i.ImageColor3==z then i.ImageColor3=A;g.ImageColor3=z;e.ImageColor3=z;y=false;w.Character:FindFirstChild("HumanoidRootPart").CFrame=CFrame.new(-384.953857,42.8630886,-287.246124)for C,D in pairs(w.Character:GetChildren())do if D:IsA("Tool")and D.Name=="[HeavyWeights]"then D.Parent=w.Backpack end end else i.ImageColor3=z end end)game:GetService("RunService").Stepped:Connect(function()if w and w.Character and w.Character:FindFirstChild("FULLY_LOADED_CHAR")then if g.ImageColor3==A then if w.Backpack:FindFirstChild("Combat")then w.Character:FindFirstChildWhichIsA("Humanoid"):EquipTool(w.Backpack:FindFirstChild("Combat"))end;w.Character:FindFirstChild("HumanoidRootPart").CFrame=CFrame.new(-276.682251,24.1835537,-1138.64343)w.Character:FindFirstChild("Combat"):Activate()w.Character:FindFirstChild("Combat"):Deactivate()end;if e.ImageColor3==A then if w.Backpack:FindFirstChild("[HeavyWeights]")then for C,D in pairs(w.Backpack:GetChildren())do if D:IsA("Tool")and D.Name=="[HeavyWeights]"then D.Parent=w.Character end end end;if y==true and w.Character then w.Character:FindFirstChild("HumanoidRootPart").CFrame=CFrame.new(-253.618286,42.6555252,-110.352257)y=false end;w.Character:FindFirstChild("[HeavyWeights]"):Activate()w.Character:FindFirstChild("[HeavyWeights]"):Deactivate()end;if i.ImageColor3==A then if(workspace.Ignored.Shop["[Lettuce] - $5"].Head.Position-w.Character.HumanoidRootPart.Position).Magnitude>=22 then w.Character:FindFirstChild("HumanoidRootPart").CFrame=CFrame.new(-84.7734375,27.0633297,-633.006775)end;if not w.Character:FindFirstChild("[Lettuce]")then fireclickdetector(workspace.Ignored.Shop["[Lettuce] - $5"].ClickDetector)end;for C,D in pairs(w.Backpack:GetChildren())do if D.Name=="[Lettuce]"and D:IsA("Tool")then D.Parent=w.Character end end;if w.Character:FindFirstChild("[Lettuce]")then w.Character:FindFirstChild("[Lettuce]"):Activate()end end end end)spawn(function()while wait(6)do if g.ImageColor3==A or e.ImageColor3==A or i.ImageColor3==A then local E=w.DataFolder.Information.MuscleInformation.Value;local F=w.DataFolder.Information.BoxingValue.Value;local G=15000;local H=2500;game.StarterGui:SetCore("SendNotification",{Title="Stats",Text="Muscle: "..E/G*100 .."%  Boxing: "..F/H*100 .."%",Duration=5})end end end)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0 
+
+repeat wait() until game.Players.LocalPlayer.Character.Humanoid.Health ~= 0 
+
+local ScreenGui = Instance.new("ScreenGui")
+local Back = Instance.new("Frame")
+local Main = Instance.new("Frame")
+local ButtonBack = Instance.new("Frame")
+local AutoWeight = Instance.new("ImageButton")
+local ButtonBack_2 = Instance.new("Frame")
+local AutoBox = Instance.new("ImageButton")
+local ButtonBack_3 = Instance.new("Frame")
+local AutoLettuce = Instance.new("ImageButton")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Back.Name = "Back"
+Back.Parent = ScreenGui
+Back.AnchorPoint = Vector2.new(0.5, 0.5)
+Back.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Back.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Back.Position = UDim2.new(0.162704304, 0, 0.340490788, 0)
+Back.Size = UDim2.new(0, 150, 0, 95)
+Main.Name = "Main"
+Main.Parent = Back
+Main.AnchorPoint = Vector2.new(0.5, 0.5)
+Main.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.Position = UDim2.new(0.5, 0, 0.5, 0)
+Main.Size = UDim2.new(0, 146, 0, 91)
+ButtonBack.Name = "ButtonBack"
+ButtonBack.Parent = Main
+ButtonBack.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonBack.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ButtonBack.Position = UDim2.new(0.058252424, 0, 0.0500000007, 0)
+ButtonBack.Size = UDim2.new(0, 25, 0, 25)
+AutoWeight.Name = "AutoWeight"
+AutoWeight.Parent = ButtonBack
+AutoWeight.AnchorPoint = Vector2.new(0.5, 0.5)
+AutoWeight.BackgroundColor3 = Color3.fromRGB(98, 17, 0)
+AutoWeight.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoWeight.Position = UDim2.new(0.5, 0, 0.5, 0)
+AutoWeight.Size = UDim2.new(0, 21, 0, 21)
+AutoWeight.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+AutoWeight.ImageColor3 = Color3.fromRGB(84, 0, 0)
+AutoWeight.ZIndex = 10
+ButtonBack_2.Name = "ButtonBack"
+ButtonBack_2.Parent = Main
+ButtonBack_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonBack_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ButtonBack_2.Position = UDim2.new(0.0579999983, 0, 0.370000005, 0)
+ButtonBack_2.Size = UDim2.new(0, 25, 0, 25)
+AutoBox.Name = "AutoBox"
+AutoBox.Parent = ButtonBack_2
+AutoBox.AnchorPoint = Vector2.new(0.5, 0.5)
+AutoBox.BackgroundColor3 = Color3.fromRGB(98, 17, 0)
+AutoBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoBox.Position = UDim2.new(0.5, 0, 0.5, 0)
+AutoBox.Size = UDim2.new(0, 21, 0, 21)
+AutoBox.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+AutoBox.ImageColor3 = Color3.fromRGB(84, 0, 0)
+AutoBox.ZIndex = 10
+ButtonBack_3.Name = "ButtonBack"
+ButtonBack_3.Parent = Main
+ButtonBack_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonBack_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ButtonBack_3.Position = UDim2.new(0.0579999983, 0, 0.699999988, 0)
+ButtonBack_3.Size = UDim2.new(0, 25, 0, 25)
+AutoLettuce.Name = "AutoLettuce"
+AutoLettuce.Parent = ButtonBack_3
+AutoLettuce.AnchorPoint = Vector2.new(0.5, 0.5)
+AutoLettuce.BackgroundColor3 = Color3.fromRGB(98, 17, 0)
+AutoLettuce.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoLettuce.Position = UDim2.new(0.5, 0, 0.5, 0)
+AutoLettuce.Size = UDim2.new(0, 21, 0, 21)
+AutoLettuce.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+AutoLettuce.ImageColor3 = Color3.fromRGB(84, 0, 0)
+AutoLettuce.ZIndex = 10
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.Position = UDim2.new(0.213592231, 0, 0.0500000007, 0)
+TextLabel.Size = UDim2.new(0, 150, 0, 21)
+TextLabel.Font = Enum.Font.RobotoMono
+TextLabel.Text = " AutoWeight"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 15.000
+TextLabel.TextStrokeTransparency = 0.000
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_2.Parent = Main
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_2.Position = UDim2.new(0.213592231, 0, 0.370000005, 0)
+TextLabel_2.Size = UDim2.new(0, 150, 0, 21)
+TextLabel_2.Font = Enum.Font.RobotoMono
+TextLabel_2.Text = " AutoBox"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 15.000
+TextLabel_2.TextStrokeTransparency = 0.000
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_3.Parent = Main
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_3.Position = UDim2.new(0.213592231, 0, 0.699999988, 0)
+TextLabel_3.Size = UDim2.new(0, 150, 0, 21)
+TextLabel_3.Font = Enum.Font.RobotoMono
+TextLabel_3.Text = " AutoLettuce"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 15.000
+TextLabel_3.TextStrokeTransparency = 0.000
+TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+
+function roundNumber(num, numDecimalPlaces)
+	return tonumber(string.format("%." .. (numDecimalPlaces or 0) .. "f", num))
+end
+
+local UserInputService = game:GetService("UserInputService")
+local gui = Back
+local dragging
+local dragInput
+local dragStart
+local startPos
+local function update(input)
+	local delta = input.Position - dragStart
+	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+gui.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		dragging = true
+		dragStart = input.Position
+		startPos = gui.Position
+
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+gui.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		dragInput = input
+	end
+end)
+UserInputService.InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		update(input)
+	end
+end)
+
+
+local players = game:GetService("Players")
+local plr = players.LocalPlayer
+local char = plr:FindFirstChild("Character")
+local BoughtWeights = false
+
+local R = Color3.fromRGB(84, 0, 0)
+local G = Color3.fromRGB(6, 94, 0)
+
+plr:GetMouse().KeyDown:Connect(function(key)
+	if key == "v" then 
+		Back.Visible = not Back.Visible
+	end
+end)
+
+
+
+AutoBox.MouseButton1Click:Connect(function()
+	if AutoBox.ImageColor3 == R then 
+		AutoBox.ImageColor3 = G 
+		AutoWeight.ImageColor3 = R
+		AutoLettuce.ImageColor3 = R
+		BoughtWeights = false
+		plr.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-384.953857, 42.8630886, -287.246124)
+		for i,v in pairs(plr.Character:GetChildren()) do
+			if v:IsA("Tool") and v.Name == "[HeavyWeights]" or v.Name == "[Weights]"then 
+				v.Parent = plr.Backpack
+			end
+		end
+	else 
+		AutoBox.ImageColor3 = R
+	end
+end)
+
+AutoWeight.MouseButton1Click:Connect(function()
+	if AutoWeight.ImageColor3 == R then 
+		AutoWeight.ImageColor3 = G 
+		AutoBox.ImageColor3 = R
+		AutoLettuce.ImageColor3 = R
+			plr.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-47.2154503, 24.5633602, -650.398682)
+			wait(2)
+			fireclickdetector(workspace.Ignored.Shop["[HeavyWeights] - $250"].ClickDetector)
+			wait(1.2)
+			fireclickdetector(workspace.Ignored.Shop["[HeavyWeights] - $250"].ClickDetector)
+			wait(1.2)
+			fireclickdetector(workspace.Ignored.Shop["[Weights] - $120"].ClickDetector)
+			wait(1.2)
+			fireclickdetector(workspace.Ignored.Shop["[Weights] - $120"].ClickDetector)
+			wait(1.5)
+			BoughtWeights = true
+	else 
+		AutoWeight.ImageColor3 = R
+		BoughtWeights = false
+		plr.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-384.953857, 42.8630886, -287.246124)
+		for i,v in pairs(plr.Character:GetChildren()) do
+			if v:IsA("Tool") and v.Name == "[HeavyWeights]" or v.Name == "[Weights]"then 
+				v.Parent = plr.Backpack
+			end
+		end
+	end
+end)
+
+AutoLettuce.MouseButton1Click:Connect(function()
+	if AutoLettuce.ImageColor3 == R then 
+		AutoLettuce.ImageColor3 = G 
+		AutoBox.ImageColor3 = R
+		AutoWeight.ImageColor3 = R
+		BoughtWeights = false
+		plr.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-384.953857, 42.8630886, -287.246124)
+		for i,v in pairs(plr.Character:GetChildren()) do
+			if v:IsA("Tool") and v.Name == "[HeavyWeights]" or v.Name == "[Weights]" then 
+				v.Parent = plr.Backpack
+			end
+		end
+	else 
+		AutoLettuce.ImageColor3 = R
+	end
+end)
+
+
+game:GetService("RunService").Stepped:Connect(function()
+	if plr and plr.Character and plr.Character:FindFirstChild("FULLY_LOADED_CHAR") then
+	
+	
+	if AutoBox.ImageColor3 == G then 
+		if plr.Backpack:FindFirstChild("Combat") then plr.Character:FindFirstChildWhichIsA("Humanoid"):EquipTool(plr.Backpack:FindFirstChild("Combat")) end
+		plr.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-276.682251, 24.1835537, -1138.64343)
+		plr.Character:FindFirstChild("Combat"):Activate()
+		plr.Character:FindFirstChild("Combat"):Deactivate()
+	end
+	
+	if AutoWeight.ImageColor3 == G then
+		for i,v in pairs(plr.Backpack:GetChildren()) do
+			if v.Name == "[HeavyWeights]" or v.Name == "[Weights]" then 
+				v.Parent = plr.Character
+			end
+		end
+		if BoughtWeights == true and plr.Character then 
+			plr.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-253.618286, 42.6555252, -110.352257)
+			BoughtWeights = false
+		end
+		plr.Character:FindFirstChild("[HeavyWeights]"):Activate()
+		plr.Character:FindFirstChild("[Weights]"):Activate()
+		plr.Character:FindFirstChild("[HeavyWeights]"):Deactivate()
+		plr.Character:FindFirstChild("[Weights]"):Deactivate()
+	end
+	
+	if AutoLettuce.ImageColor3 == G then 
+		if (workspace.Ignored.Shop["[Lettuce] - $5"].Head.Position -plr.Character.HumanoidRootPart.Position).Magnitude >= 22 then
+			plr.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-84.7734375, 27.0633297, -633.006775)
+		end
+		if not plr.Character:FindFirstChild("[Lettuce]") then fireclickdetector(workspace.Ignored.Shop["[Lettuce] - $5"].ClickDetector) end
+		for i,v in pairs(plr.Backpack:GetChildren()) do 
+			if v.Name == "[Lettuce]" and v:IsA("Tool") then 
+				v.Parent = plr.Character
+			end
+		end
+		if plr.Character:FindFirstChild("[Lettuce]") then plr.Character:FindFirstChild("[Lettuce]"):Activate()
+			end
+		end
+	end
+end)
+
+spawn(function()
+	while wait(6) do 
+		if AutoBox.ImageColor3 == G or AutoWeight.ImageColor3 == G or AutoLettuce.ImageColor3 == G then 
+			local Str = plr.DataFolder.Information.MuscleInformation.Value
+			local Box = plr.DataFolder.Information.BoxingValue.Value
+			local MaxStr = 15000
+			local MaxBox = 2500
+			
+			game.StarterGui:SetCore("SendNotification",{Title ="Stats",Text ="Muscle: "..roundNumber((Str / MaxStr * 100),4).."%  Boxing: "..roundNumber((Box / MaxBox * 100),4).."%",Duration =5})
+		end
+	end
+end)
