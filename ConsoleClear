@@ -3,27 +3,35 @@ if not game:IsLoaded() then
 	task.wait(2)
 end
 
-if not game:GetService("CoreGui"):FindFirstChild("DevConsoleMaster") then 
-repeat task.wait() until  game:GetService("CoreGui"):FindFirstChild("DevConsoleMaster")
+local function CreateButton()
+    local Console = game:GetService("CoreGui").DevConsoleMaster.DevConsoleWindow.DevConsoleUI
+
+    local ClearButton = Instance.new("TextButton", Console.MainView.UtilAndTab.UtilBar.SearchBar)
+    ClearButton.Size = UDim2.new(1, -120, 1, 0)
+    ClearButton.Position = UDim2.new(-0.45,0,0,0)
+    ClearButton.BackgroundColor3 = Color3.fromRGB(78, 84, 96)
+    ClearButton.Font = Enum.Font.Code
+    ClearButton.BorderColor3 = Color3.fromRGB(184, 184, 184)
+    ClearButton.TextColor3 = Color3.fromRGB(184, 184, 184)
+    ClearButton.TextSize = 14 
+    ClearButton.Name = "ClearButton"
+    ClearButton.Text = "Clear"
+    
+    ClearButton.MouseButton1Click:Connect(function()
+        for i,v in pairs(Console.MainView.ClientLog:GetChildren()) do 
+            if v.Name ~= "WindowingPadding" and v.Name ~= "UIListLayout" and v:IsA("Frame") then 
+                v:Destroy()
+            end
+        end
+    end) 
 end
 
-local Console = game:GetService("CoreGui").DevConsoleMaster.DevConsoleWindow.DevConsoleUI
+if not game:GetService("CoreGui"):FindFirstChild("DevConsoleMaster") then 
+    repeat task.wait() until  game:GetService("CoreGui"):FindFirstChild("DevConsoleMaster")
+    task.wait(1)
+    CreateButton()
+else 
+    CreateButton()
+end
 
-local ClearButton = Instance.new("TextButton", Console.MainView.UtilAndTab.UtilBar.SearchBar)
-ClearButton.Size = UDim2.new(1, -120, 1, 0)
-ClearButton.Position = UDim2.new(-0.45,0,0,0)
-ClearButton.BackgroundColor3 = Color3.fromRGB(78, 84, 96)
-ClearButton.Font = Enum.Font.Code
-ClearButton.BorderColor3 = Color3.fromRGB(184, 184, 184)
-ClearButton.TextColor3 = Color3.fromRGB(184, 184, 184)
-ClearButton.TextSize = 14 
-ClearButton.Name = "ClearButton"
-ClearButton.Text = "Clear"
-
-ClearButton.MouseButton1Click:Connect(function()
-    for i,v in pairs(Console.MainView.ClientLog:GetChildren()) do 
-        if v.Name ~= "WindowingPadding" and v.Name ~= "UIListLayout" and v:IsA("Frame") then 
-            v:Destroy()
-        end
-    end
-end)    
+    
