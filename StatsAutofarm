@@ -1,6 +1,7 @@
-game.Players.LocalPlayer.Character.Humanoid.Health = 0 
+--// i made this a while ago so the code might be bad
 
-repeat wait() until game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid") and game.Players.LocalPlayer.Character.Humanoid.Health ~= 0 
+repeat task.wait() until game:IsLoaded() and game:GetService("Players").LocalPlayer
+task.wait(1)
 
 local ScreenGui = Instance.new("ScreenGui")
 local Back = Instance.new("Frame")
@@ -254,6 +255,11 @@ game:GetService("RunService").Stepped:Connect(function()
 			plr.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-253.618286, 42.6555252, -110.352257)
 			BoughtWeights = false
 		end
+		for i,v in pairs(plr.Character:GetChildren()) do 
+			if v.Name == "[HeavyWeights]" or v.Name == "[Weights]" then
+				v:Activate()
+			end
+		end
 	end
 	
 	if AutoLettuce.ImageColor3 == G then 
@@ -269,17 +275,6 @@ game:GetService("RunService").Stepped:Connect(function()
 		if plr.Character:FindFirstChild("[Lettuce]") then plr.Character:FindFirstChild("[Lettuce]"):Activate()
 			end
 		end
-	end
-end)
-
-spawn(function()
-	while true do 
-		for i,v in pairs(plr.Character:GetChildren()) do 
-			if v.Name == "[HeavyWeights]" or v.Name == "[Weights]" then
-				v:Activate()
-			end
-		end
-	task.wait(.05)
 	end
 end)
 
