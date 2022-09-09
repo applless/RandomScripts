@@ -3,7 +3,7 @@ repeat task.wait(0.5) until game:IsLoaded() and game:GetService("Players").Local
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 
-workspace.Gravity = 0
+
 
 local S = {
 	Found = false,
@@ -24,6 +24,7 @@ if S.Found == false then
 	return
 end
 
+workspace.Gravity = 0
 
 function Say(Str)
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(tostring(Str), "All")
