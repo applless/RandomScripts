@@ -105,6 +105,7 @@ function CMD(Str)
 		end
 	elseif Cmd[1] == ((getgenv().Settings.prefix).."stopdupe") then
 		S.Duping = false 
+		S.IsGrabber = false
 		S.Target = nil
 		S.Cashaura = false
 		Velocity(false)
