@@ -1,0 +1,118 @@
+repeat task.wait(0.5) until game:IsLoaded() and game:GetService("Players").LocalPlayer
+
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+
+workspace.Gravity = 0
+
+local S = {
+	Found = false,
+	Loaded = true,
+	IsGrabber = false,
+	Duping = false,
+	Cashaura = false,
+	Target = nil,
+}
+
+for i,v in pairs(getgenv().Alts) do 
+	if v == Player.UserId then 
+		S.Found = true
+	end
+end
+
+if S.Found == false then 
+	return
+end
+
+
+function Say(Str)
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(tostring(Str), "All")
+end
+
+spawn(function()
+	repeat task.wait(0.2) until Player.Character and Player.Character:FindFirstChildWhichIsA("Humanoid") and Player.Character:FindFirstChild("FULLY_LOADED_CHAR")
+	task.wait(0.1)
+	S.Loaded = true
+	Say("Dupe Command Loaded!")
+end)
+
+function Velocity(Enabled)
+	if Enabled == true then 
+		if not Player.Character.HumanoidRootPart:FindFirstChild("_Vel_") then 
+			local vel = Instance.new("BodyVelocity")
+			vel.MaxForce = Vector3.new(1, 1, 1) * math.huge
+			vel.P = math.huge
+			vel.Velocity = Vector3.new(0, 0, 0)
+			vel.Name = "_Vel_"
+			vel.Parent = Player.Character.HumanoidRootPart
+		end
+	else
+		if Player.Character.HumanoidRootPart:FindFirstChild("_Vel_") then 
+			Player.Character.HumanoidRootPart:FindFirstChild("_Vel_"):Destroy()
+		end
+	end
+end
+
+
+function CMD(Str)
+	if S.Loaded == false then 
+		return
+	end
+	
+	local Cmd = (Str:lower():split(" "))
+	
+	if Cmd[1] == ((getgenv().Settings.prefix).."dupe") then 
+		
+		for i,v in pairs(Players:GetChildren()) do
+			if (string.sub(string.lower(v.Name),1,string.len(Cmd[2]))) == string.lower(Cmd[2]) then
+				S.Target = v
+			end
+		end
+		
+		if S.Target.UserId == Player.UserId then 
+			S.IsGrabber = true
+		end
+		
+		Velocity(true)
+		
+		if S.IsGrabber == false then 
+			task.wait(0.1)
+			S.Duping = true
+			Say("Started")
+			spawn(function()
+				repeat  
+					game:GetService("ReplicatedStorage").MainEvent:FireServer("DropMoney", "10000")
+					task.wait(2.5)
+				until S.Duping == false
+				Say("Stopped Duping")
+			end)
+		end
+		
+		if S.IsGrabber == true then 
+			Say("Picking up cash")
+			S.Cashaura = true
+			spawn(function()
+				repeat 
+					for i,v in pairs(workspace.Ignored:FindFirstChild("Drop"):GetChildren()) do 
+						if v.Name == "MoneyDrop" and Player:DistanceFromCharacter(v.Position) < 13 then 
+							fireclickdetector(v.ClickDetector, 12.2)
+						end
+					end
+					task.wait(0.5)
+				until S.Cashaura == false
+				Say("Stopped picking up")
+			end)
+		end
+	elseif Cmd[1] == ((getgenv().Settings.prefix).."stopdupe") then
+		S.Duping = false 
+		S.Target = nil
+		S.Cashaura = false
+		Velocity(false)
+	end
+end
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(Data) 
+	if Players[Data.FromSpeaker].UserId == tonumber(getgenv().Settings.host) then
+		CMD(Data.Message)
+	end
+end)
