@@ -41,17 +41,17 @@ end)
 
 function Velocity(Enabled)
 	if Enabled == true then 
-		if not Player.Character.HumanoidRootPart:FindFirstChild("_Vel_") then 
+		if not Player.Character.Head:FindFirstChild("_Vel_") then 
 			local vel = Instance.new("BodyVelocity")
 			vel.MaxForce = Vector3.new(1, 1, 1) * math.huge
 			vel.P = math.huge
 			vel.Velocity = Vector3.new(0, 0, 0)
 			vel.Name = "_Vel_"
-			vel.Parent = Player.Character.HumanoidRootPart
+			vel.Parent = Player.Character.Head
 		end
 	else
-		if Player.Character.HumanoidRootPart:FindFirstChild("_Vel_") then 
-			Player.Character.HumanoidRootPart:FindFirstChild("_Vel_"):Destroy()
+		if Player.Character.Head:FindFirstChild("_Vel_") then 
+			Player.Character.Head:FindFirstChild("_Vel_"):Destroy()
 		end
 	end
 end
