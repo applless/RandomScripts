@@ -1,3 +1,7 @@
+--// Open source cuz im not gonna waste money on obfuscating this
+--// Skid whatever u want i dont really care
+
+task.wait(1)
 if (not game:IsLoaded()) then 
 	game.Loaded:Wait()
 	task.wait(2)
@@ -18,10 +22,21 @@ local Chat = function(Str)
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(tostring(Str), "All")
 end
 
+local CheckTable = function(Id)
+    Found = false 
+    for i,v in pairs(getgenv().Alts) do 
+        if (v == Id) then 
+           Found = true 
+        end
+    end
+    
+    return Found
+end
+
 local AltsInGame = function()
 	local Am = 0
 	for i,v in pairs(Players:GetChildren()) do 
-		if (table.find((getgenv().Alts), v.UserId)) then 
+		if (CheckTable(v.UserId) == true) then 
 			Am += 1
 		end
 	end
@@ -35,8 +50,9 @@ local GetAltNumber = function()
 			Number = i
 		end
 	end
-	return Number
+	return tonumber(string.sub(Number, 4, string.len(Number)))
 end
+
 
 local I = {
 	duping = false,
@@ -76,12 +92,18 @@ local Main = function()
 	end)
 	
 	task.spawn(function()
-		repeat task.wait(0.1) until (I.hostPlayer ~= nil) 
 		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(Data) 
 			if Players[Data.FromSpeaker].UserId == tonumber(getgenv().Settings.host) then
-				local Cmd = string.split(string.lower(Data.Message), "")
+				local Cmd = string.split(string.lower(Data.Message), " ")
 				
 				if (Cmd[1] == ((getgenv().Settings.prefix).."dupe")) then 
+
+                    if (I.duping == true) then 
+                        Chat("Dupe | Dupe already started.")
+                        task.wait(0.1)
+                        Chat("Dupe | Chat "..(getgenv().Settings.prefix).."stopdupe to stop.")
+                        return
+                    end
 					
 					for i,v in pairs(Players:GetChildren()) do 
 						if (string.sub(string.lower(v.Name),1,string.len(Cmd[2]))) == string.lower(Cmd[2]) then
@@ -98,20 +120,23 @@ local Main = function()
 					if (Player.UserId == I.grabberPlayer.UserId) then 
 						I.isGrabber = true
 					end
+
+                    I.duping = true
 					
-					if (I.isGrabber == true) then 
+					if (I.isGrabber == true) then
 						task.spawn(function()
 							Chat("Dupe | Starting collecting cash.")
 							I.cashAura = true 
 							
 							repeat 
+                                Player.Character.HumanoidRootPart.Anchored = false
 								for i,v in pairs(workspace.Ignored:FindFirstChild("Drop"):GetChildren()) do 
 									if v.Name == "MoneyDrop" and Player:DistanceFromCharacter(v.Position) < 13 then 
 										fireclickdetector(v.ClickDetector, 12.2)
 										task.wait(0.33)
 									end
 								end
-								task.wait(0.1)
+								task.wait(0.13)
 							until (I.cashAura == false) or (I.isGrabber == false)
 							
 							Chat("Dupe | Stopped collecting cash.")
@@ -122,10 +147,10 @@ local Main = function()
 						
 							repeat 
 								local AltNr,AltsInGame = GetAltNumber(), AltsInGame()	
-								print(AltNr, AltsInGame)
-								
-								local Pos = (I.grabberPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(math.cos((AltNr * ((2*math.pi)/AltsInGame))) * 8, 0, math.sin((AltNr * ((2*math.pi)/AltsInGame))) * 8)).p
 
+								local Pos = (I.grabberPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(math.cos((AltNr * ((2*math.pi)/(AltsInGame-1)))) * 6.5, 0, math.sin((AltNr * ((2*math.pi)/(AltsInGame-1)))) * 6.5)).p
+
+                                Player.Character.HumanoidRootPart.Anchored = false
 								Player.Character.HumanoidRootPart.CFrame = CFrame.new(Pos, I.grabberPlayer.Character.HumanoidRootPart.Position)
 								
 								Event:FireServer("DropMoney", "10000")
@@ -148,7 +173,6 @@ local Main = function()
 
 end
 
-if (table.find((getgenv().Alts), Player.UserId)) and (tonumber(getgenv().Settings.host) ~= Player.UserId) then 
+if (CheckTable(Player.UserId) == true) and (tonumber(getgenv().Settings.host) ~= Player.UserId) then 
 	Main()
 end
-
