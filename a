@@ -1,0 +1,154 @@
+if (not game:IsLoaded()) then 
+	game.Loaded:Wait()
+	task.wait(2)
+end
+
+if (not (getgenv().Alts)) then 
+	return
+end
+
+repeat task.wait(0.1) until (game:GetService("Players").LocalPlayer) and (game:GetService("Players").LocalPlayer.Character)
+task.wait(0.2)
+
+local Players = game:GetService("Players")
+local Event = game:GetService("ReplicatedStorage").MainEvent
+local Player = Players.LocalPlayer
+
+local Chat = function(Str)
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(tostring(Str), "All")
+end
+
+local AltsInGame = function()
+	local Am = 0
+	for i,v in pairs(Players:GetChildren()) do 
+		if (table.find((getgenv().Alts), v.UserId)) then 
+			Am += 1
+		end
+	end
+	return Am
+end
+
+local GetAltNumber = function()
+	local Number = nil
+	for i,v in pairs((getgenv().Alts)) do 
+		if (v == Player.UserId) then
+			Number = i
+		end
+	end
+	return Number
+end
+
+local I = {
+	duping = false,
+	hostPlayer = nil,
+	canFireClickDetector = false,
+	isGrabber = false,
+	grabberPlayer = nil,
+	cashAura = false,
+}
+
+
+local a=Instance.new("Part",workspace)a.Anchored=true;a.CanCollide=false;a.Position=Vector3.new(0,0,0)local b=Instance.new("ClickDetector",a)b.MouseClick:Connect(function()I.canFireClickDetector=true end)for c=1,10 do pcall(function()fireclickdetector(b)end)task.wait(0.02)end
+if (I.canFireClickDetector == false) then 
+	Chat("Dupe | Executor not supported.")
+	return
+else 
+	a:Destroy()
+end
+
+
+local Main = function()
+	repeat task.wait(0.1) until (Player.Character) and (Player.Character:FindFirstChild("Humanoid")) and (Player.Character:FindFirstChild("FULLY_LOADED_CHAR"))
+	pcall(function()local a=game:GetService("ReplicatedStorage").MainEvent;local b={"CHECKER_1","TeleportDetect","OneMoreTime"}local c;c=hookmetamethod(game,"__namecall",function(...)local d={...}local self=d[1]local e=getnamecallmethod()local f=getcallingscript()if e=="FireServer"and self==a and table.find(b,d[2])then return end return c(...)end)end)
+	Chat("Dupe | Successfully loaded.")
+
+	for i,v in pairs(Players:GetChildren()) do 
+		if (v.UserId == tonumber(getgenv().Settings.host)) then 
+			I.hostPlayer = v
+		end
+	end
+	
+	Players.PlayerAdded:Connect(function(NewPlayer)
+		task.wait(0.1)
+		if (NewPlayer.UserId == tonumber(getgenv().Settings.host)) then 
+			I.hostPlayer = NewPlayer
+		end
+	end)
+	
+	task.spawn(function()
+		repeat task.wait(0.1) until (I.hostPlayer ~= nil) 
+		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(Data) 
+			if Players[Data.FromSpeaker].UserId == tonumber(getgenv().Settings.host) then
+				local Cmd = string.split(string.lower(Data.Message), "")
+				
+				if (Cmd[1] == ((getgenv().Settings.prefix).."dupe")) then 
+					
+					for i,v in pairs(Players:GetChildren()) do 
+						if (string.sub(string.lower(v.Name),1,string.len(Cmd[2]))) == string.lower(Cmd[2]) then
+							I.grabberPlayer = v
+						end
+					end
+					
+					if (I.grabberPlayer == nil) then 
+						Chat("Dupe | Player not found.")
+						return
+					end
+					
+					
+					if (Player.UserId == I.grabberPlayer.UserId) then 
+						I.isGrabber = true
+					end
+					
+					if (I.isGrabber == true) then 
+						task.spawn(function()
+							Chat("Dupe | Starting collecting cash.")
+							I.cashAura = true 
+							
+							repeat 
+								for i,v in pairs(workspace.Ignored:FindFirstChild("Drop"):GetChildren()) do 
+									if v.Name == "MoneyDrop" and Player:DistanceFromCharacter(v.Position) < 13 then 
+										fireclickdetector(v.ClickDetector, 12.2)
+										task.wait(0.33)
+									end
+								end
+								task.wait(0.1)
+							until (I.cashAura == false) or (I.isGrabber == false)
+							
+							Chat("Dupe | Stopped collecting cash.")
+						end)
+					else 
+						task.spawn(function()
+							Chat("Dupe | Starting dropping cash.")
+						
+							repeat 
+								local AltNr,AltsInGame = GetAltNumber(), AltsInGame()	
+								print(AltNr, AltsInGame)
+								
+								local Pos = (I.grabberPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(math.cos((AltNr * ((2*math.pi)/AltsInGame))) * 8, 0, math.sin((AltNr * ((2*math.pi)/AltsInGame))) * 8)).p
+
+								Player.Character.HumanoidRootPart.CFrame = CFrame.new(Pos, I.grabberPlayer.Character.HumanoidRootPart.Position)
+								
+								Event:FireServer("DropMoney", "10000")
+								task.wait(0.5)
+							until (I.duping == false)
+							
+							Chat("Dupe | Stopped dropping cash.")
+						end)	
+					end
+					
+					
+				elseif (Cmd[1] == ((getgenv().Settings.prefix).."stopdupe")) then 
+					I.cashAura = false 
+					I.isGrabber = false 
+					I.duping = false
+				end
+			end
+		end)
+	end)
+
+end
+
+if (table.find((getgenv().Alts), Player.UserId)) and (tonumber(getgenv().Settings.host) ~= Player.UserId) then 
+	Main()
+end
+
