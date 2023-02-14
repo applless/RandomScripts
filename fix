@@ -27,6 +27,17 @@ T:GetPropertyChangedSignal("Text"):Connect(function()
 
             game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(9e7, 9e7, 9e7)
             game:GetService("RunService").Stepped:Wait()
+
+            for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do 
+                v.Parent = game:GetService("Players").LocalPlayer.Character
+            end
+            
+            for i,v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do 
+               if (v:Is("BasePart")) or (v:IsA("MeshPart")) or (v:IsA("Accessory")) then 
+                  v:Destroy() 
+               end
+            end
+            
         until (game:GetService("Players").LocalPlayer.Character.Humanoid.Health <= 0) or (T.Text ~= "Crashing...")
     end
 end)
