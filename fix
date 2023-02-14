@@ -1,0 +1,37 @@
+if (not game:IsLoaded()) then 
+    game.Loaded:Wait()
+    task.wait(2)
+end
+
+local CONN = nil
+local CG = game:GetService("CoreGui")
+repeat task.wait(0.77) until (CG:FindFirstChild("CRASH")) and (CG.CRASH:FindFirstChild("Main")) and (CG.CRASH.Main:FindFirstChild("Toggle"))
+local T = CG.CRASH.Main.Toggle
+print("found ", T:GetFullName())
+
+T:GetPropertyChangedSignal("Text"):Connect(function()
+    task.wait()
+
+    if (T.Text == "Crashing...") then 
+       repeat 
+            if (not workspace:FindFirstChild("CAM_PART")) then 
+                local CP = Instance.new("Part", workspace)
+                CP.Anchored = true 
+                CP.CanCollide = false 
+                CP.Position = Vector3.new(9e8, 9e5, 9e8)
+                CP.Size = Vector3.new(5, 5, 5)
+                CP.Transparency = 0.7
+                CP.Name = "CAM_PART"
+                workspace.Camera.CameraSubject = workspace.CAM_PART
+            end
+
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(9e7, 9e7, 9e7)
+            game:GetService("RunService").Stepped:Wait()
+        until (game:GetService("Players").LocalPlayer.Character.Humanoid.Health <= 0) or (T.Text ~= "Crashing...")
+    end
+end)
+
+
+
+
+
