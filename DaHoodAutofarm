@@ -1,6 +1,12 @@
 getgenv().Enabled = true
 getgenv().Dis = function()
 	Enabled = false
+
+	for i,v in pairs(workspace:GetDescendants()) do 
+		if (v:IsA("Seat")) or (v:IsA("VehicleSeat")) then 
+			v.Disabled = true
+		end
+	end
 end
 
 if (not game:IsLoaded()) then 
@@ -16,6 +22,14 @@ local Player = Players.LocalPlayer
 
 loadstring(game:HttpGet("https://github.com/applless/RandomScripts/raw/main/AntiAfk"))()
 pcall(function()local a=game:GetService("ReplicatedStorage").MainEvent;local b={"CHECKER_1","TeleportDetect","OneMoreTime"}local c;c=hookmetamethod(game,"__namecall",function(...)local d={...}local self=d[1]local e=getnamecallmethod()local f=getcallingscript()if e=="FireServer"and self==a and table.find(b,d[2])then return end return c(...)end)end)
+
+for i,v in pairs(workspace:GetDescendants()) do 
+	if (v:IsA("Seat")) or (v:IsA("VehicleSeat")) then 
+		v.Disabled = true
+	end
+end
+
+
 
 local GetClosestPart = function(Table)
 	local ClosestPart = nil
@@ -126,5 +140,4 @@ task.spawn(function()
 		end
 	end
 end)
-
 
