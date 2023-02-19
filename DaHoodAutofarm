@@ -97,6 +97,7 @@ task.spawn(function()
 				
 				if (Player.Character:FindFirstChild("Combat")) then 
 					Player.Character.Combat:Activate()
+					Player.Character.Combat:Deactivate()
 				end
 
 				
@@ -124,4 +125,5 @@ task.spawn(function()
 		end
 	end
 end)
+
 
