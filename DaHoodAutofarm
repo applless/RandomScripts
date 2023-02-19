@@ -52,7 +52,14 @@ local GetCashier = function()
 		end
 	end
 	
-	return GetClosestPart(AvailableCashiers).Parent
+	local ClosestPart = GetClosestPart(AvailableCashiers)
+	
+	if (ClosestPart) and (ClosestPart.Parent) then 
+		return ClosestPart.Parent
+	else 
+		return nil
+	end
+
 end
 
 local GetCashParts = function()
@@ -70,7 +77,12 @@ end
 task.spawn(function()
 	while true and task.wait(0.33) do 
 		if (Enabled == true) and (Player.Character) and (Player.Character:FindFirstChild("FULLY_LOADED_CHAR"))  then 
-			local Cashier = GetCashier()
+			local Cashier = nil
+			repeat 
+				Cashier = GetCashier()
+				task.wait()
+			until (Cashier ~= nil)
+
 			
 			repeat 
 				if (Player.Backpack:FindFirstChild("Combat")) then 
@@ -89,7 +101,7 @@ task.spawn(function()
 
 				
 				task.wait()
-			until (Cashier.Humanoid.Health <= 0) or (Player.Character.Humanoid.Health <= 0) or (Player.Character.BodyEffects["K.O"].Value == true)
+			until (Cashier.Humanoid.Health <= 0) or (Player.Character.Humanoid.Health <= 0) or (Player.Character.BodyEffects["K.O"].Value == true) or (Enabled == false)
 			
 			pcall(CheckKOed)
 			
@@ -106,9 +118,10 @@ task.spawn(function()
 				end
 
 				task.wait()
-			until (#CashParts <= 0) or (Player.Character.Humanoid.Health <= 0) or (Player.Character.BodyEffects["K.O"].Value == true)
+			until (#CashParts <= 0) or (Player.Character.Humanoid.Health <= 0) or (Player.Character.BodyEffects["K.O"].Value == true) or (Enabled == false)
 			
 			pcall(CheckKOed)
 		end
 	end
 end)
+
