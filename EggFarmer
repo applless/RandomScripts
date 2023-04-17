@@ -1,0 +1,34 @@
+--// by BetterDaHood#0001
+
+if not game:IsLoaded() then 
+    game.Loaded:Wait()
+    task.wait(2)
+end
+
+workspace:WaitForChild("Ignored")
+
+local Player = game:GetService("Players").LocalPlayer
+
+local function checkEgg(v)
+    if string.find(v.Name, "Egg") and v:WaitForChild("TouchInterest", 5) then 
+        local character = Player.Character or Player.CharacterAdded:Wait()
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart", 5); if not humanoidRootPart then return end -- if char dies before humrootpart loads kill thread
+
+        --Touch egg until it's gone
+        while v.Parent ~= nil do
+            firetouchinterest(humanoidRootPart, v, 0)
+            task.wait(0.05)
+            firetouchinterest(humanoidRootPart, v, 1)
+        end
+    end
+end
+
+--For all current eggs
+for _,v in ipairs(workspace.Ignored:GetChildren()) do
+    task.spawn(function()
+        checkEgg(v)
+    end)
+end
+
+--For all new eggs
+workspace.Ignored.ChildAdded:Connect(checkEgg)
