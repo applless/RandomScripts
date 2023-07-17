@@ -1,0 +1,30 @@
+if (not game:IsLoaded()) then 
+	game.Loaded:Wait() 
+	task.wait(2)
+end
+
+repeat task.wait() until (game:GetService("Players").LocalPlayer) and (game:GetService("Players").LocalPlayer.Character)
+
+local Player = game:GetService("Players").LocalPlayer
+
+local NewData = "Skin Saver - by @trans\n"..Player.Name.." / "..tostring(Player.UserId).." - "..os.date("%c").."\n\n Skins:\n"
+repeat task.wait() until (Player:FindFirstChild("DataFolder")) and (Player.DataFolder:FindFirstChild("Skins"))
+task.wait(2)
+
+local Skins = Player.DataFolder.Skins
+local Saved = 0
+
+for i,v in pairs(game:GetService("HttpService"):JSONDecode(Skins.Value)) do 
+	NewData..="-   [ "..i.." ] : /\n"
+	
+	for x,z in pairs(v) do 
+		Saved += 1
+		NewData..="--         [ "..x.." ] : "..tostring(z).."\n"
+	end
+	
+	NewData..="\\,\n"
+end
+NewData..=" ------------------------\n\nSaved a total of "..tostring(Saved).." skins."
+
+writefile("SAVE-"..tostring(Player.Name)..".txt", NewData)
+
