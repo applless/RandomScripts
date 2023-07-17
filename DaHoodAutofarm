@@ -112,7 +112,7 @@ task.spawn(function()
 				
 				if (Player.Character:FindFirstChild("Combat")) then 
 					Player.Character.Combat:Activate()
-					Player.Character.Combat:Deactivate()
+					--Player.Character.Combat:Deactivate() Disabled because super punch is faster and more reliable on low fps.
 				end
 
 				
