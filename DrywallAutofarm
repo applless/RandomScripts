@@ -1,0 +1,54 @@
+local Player = game:GetService("Players").LocalPlayer 
+local Event = game:GetService("ReplicatedStorage"):WaitForChild("DrywallClicked")
+
+Player.Idled:Connect(function() game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame) end)
+Player.DevCameraOcclusionMode = "Invisicam"
+
+local GetClosest = function()
+ 
+    local Root = Player.Character.HumanoidRootPart
+    local Closest = nil 
+
+    for i,v in pairs(workspace.Drywall:GetChildren()) do 
+        if (Closest == nil) then 
+            Closest = v 
+        else 
+            if (Root.Position - v.Position).Magnitude < (Root.Position - Closest.Position).Magnitude then 
+                Closest = v 
+            end
+        end
+    end
+
+    return Closest 
+end
+
+task.spawn(function()
+    while true and task.wait() do 
+        if (Player.Character.Humanoid.Health <= 0) then 
+            break 
+        end
+
+        local Closest = GetClosest()
+        local Root = Player.Character.HumanoidRootPart
+
+        if (Closest ~= nil) then
+            Root.CFrame = Closest.CFrame + Vector3.new(math.random(-1.5, 1.5), 0, math.random(-1.5, 1.5))
+            Event:FireServer(Closest.Position, Root.Position)
+        end
+    end
+end)
+
+local Conn = nil
+Conn = game:GetService("RunService").Stepped:Connect(function()
+    if (Player.Character.Humanoid.Health <= 0) then 
+        Conn:Disconnect() 
+    end
+
+    for i,v in pairs(Player.Character:GetDescendants()) do 
+        if (v:IsA("BasePart")) or (v:IsA("Part")) then 
+            v.CanCollide = false
+            v.Velocity = Vector3.new(0, 0, 0)
+        end
+    end
+end)
+
