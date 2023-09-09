@@ -977,11 +977,7 @@ task.spawn(function()
 				until (Shutdown == true) or (IsDead() == true) or (Unarresting == false)
 			end
 			
-			
-			if (Player.Character:FindFirstChild("[Shotgun]")) then 
-				Player.Character["[Shotgun]"].Parent = Player.Backpack
-				task.wait()
-			end
+		
 
 			repeat 
 				Root.Velocity = Vector3.new(0, 0, 0)
