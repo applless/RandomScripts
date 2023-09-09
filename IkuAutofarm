@@ -866,7 +866,7 @@ local GetCloseCash = function()
 	local Am = 0
 	
 	for i,v in pairs(workspace.Ignored.Drop:GetChildren()) do 
-		if (v.Name == "MoneyDrop") and (v:FindFirstChild("ClickDetector")) and (GetMag(v) < 13.2) then 
+		if (v.Name == "MoneyDrop") and (v:FindFirstChild("ClickDetector")) and (GetMag(v) < 17) then 
 			Am += 1
 		end
 	end
@@ -1006,7 +1006,7 @@ task.spawn(function()
 			
 			repeat 
 				for i,v in pairs(workspace.Ignored.Drop:GetChildren()) do 
-					if (v.Name == "MoneyDrop") and (v:FindFirstChild("ClickDetector")) and (GetMag(v) < 13) then 
+					if (v.Name == "MoneyDrop") and (v:FindFirstChild("ClickDetector")) and (GetMag(v) < 17) then 
 						fireclickdetector(v.ClickDetector)
 						task.wait(0.1)
 					end
