@@ -2,7 +2,1090 @@
 
 releasing this as opensource because obfuscation can mess with the performance and shit
 if you skid from this atleast credit me or something
+this is coded poorly btw
 
 ]]
 
-if(_G.EXC~=nil)then warn("already executed")return else _G.EXC="@trans"end;if(not game:IsLoaded())then game.Loaded:Wait()task.wait(1)end;repeat task.wait(0.1)until(game:GetService("Players").LocalPlayer)and(game:GetService("Players").LocalPlayer.Character)local a=Instance.new("ScreenGui")local b=Instance.new("Frame")local c=Instance.new("UIGradient")local d=Instance.new("Frame")local e=Instance.new("UICorner")local f=Instance.new("Frame")local g=Instance.new("Frame")local h=Instance.new("ScrollingFrame")local i=Instance.new("UIListLayout")local j=Instance.new("UIPadding")local k=Instance.new("TextLabel")local l=Instance.new("TextLabel")local m=Instance.new("TextLabel")local n=Instance.new("TextLabel")local o=Instance.new("TextLabel")local p=Instance.new("TextLabel")local q=Instance.new("TextLabel")local r=Instance.new("Frame")local s=Instance.new("Frame")local t=Instance.new("ImageLabel")local u=Instance.new("Frame")local v=Instance.new("UICorner")local w=Instance.new("UIAspectRatioConstraint")local x=Instance.new("Frame")local y=Instance.new("UICorner")local z=Instance.new("UIAspectRatioConstraint")local A=Instance.new("Frame")local B=Instance.new("UICorner")local C=Instance.new("UIAspectRatioConstraint")local D=Instance.new("Frame")local E=Instance.new("UICorner")local F=Instance.new("UIAspectRatioConstraint")local G=Instance.new("Frame")local H=Instance.new("UICorner")local I=Instance.new("UIAspectRatioConstraint")local J=Instance.new("Frame")local K=Instance.new("UICorner")local L=Instance.new("UIAspectRatioConstraint")local M=Instance.new("Frame")local N=Instance.new("UICorner")local O=Instance.new("UIAspectRatioConstraint")local P=Instance.new("Frame")local Q=Instance.new("UICorner")local R=Instance.new("UIAspectRatioConstraint")local S=Instance.new("Frame")local T=Instance.new("UICorner")local U=Instance.new("UIAspectRatioConstraint")local V=Instance.new("Frame")local W=Instance.new("UICorner")local X=Instance.new("UIAspectRatioConstraint")local Y=Instance.new("Frame")local Z=Instance.new("UICorner")local ab=Instance.new("UIAspectRatioConstraint")local bb=Instance.new("Frame")local cb=Instance.new("UICorner")local db=Instance.new("UIAspectRatioConstraint")local eb=Instance.new("Frame")local fb=Instance.new("UICorner")local gb=Instance.new("UIAspectRatioConstraint")local hb=Instance.new("Frame")local ib=Instance.new("UICorner")local jb=Instance.new("UIAspectRatioConstraint")local kb=Instance.new("Frame")local lb=Instance.new("UICorner")local mb=Instance.new("UIAspectRatioConstraint")local nb=Instance.new("Frame")local ob=Instance.new("UICorner")local pb=Instance.new("UIAspectRatioConstraint")local qb=Instance.new("Frame")local rb=Instance.new("UICorner")local sb=Instance.new("UIAspectRatioConstraint")local tb=Instance.new("Frame")local ub=Instance.new("UICorner")local vb=Instance.new("UIAspectRatioConstraint")local wb=Instance.new("Frame")local xb=Instance.new("UICorner")local yb=Instance.new("UIAspectRatioConstraint")local zb=Instance.new("Frame")local Ab=Instance.new("UICorner")local Bb=Instance.new("UIAspectRatioConstraint")local Cb=Instance.new("Frame")local Db=Instance.new("UICorner")local Eb=Instance.new("UIAspectRatioConstraint")local Fb=Instance.new("Frame")local Gb=Instance.new("UICorner")local Hb=Instance.new("UIAspectRatioConstraint")local Ib=Instance.new("Frame")local Jb=Instance.new("UICorner")local Kb=Instance.new("UIAspectRatioConstraint")local Lb=Instance.new("Frame")local Mb=Instance.new("UICorner")local Nb=Instance.new("UIAspectRatioConstraint")local Ob=Instance.new("Frame")local Pb=Instance.new("UICorner")local Qb=Instance.new("UIAspectRatioConstraint")local Rb=Instance.new("Frame")local Sb=Instance.new("UICorner")local Tb=Instance.new("UIAspectRatioConstraint")local Ub=Instance.new("Frame")local Vb=Instance.new("UICorner")local Wb=Instance.new("UIAspectRatioConstraint")local Xb=Instance.new("Frame")local Yb=Instance.new("UICorner")local Zb=Instance.new("UIAspectRatioConstraint")local ac=Instance.new("Frame")local bc=Instance.new("UICorner")local cc=Instance.new("UIAspectRatioConstraint")local dc=Instance.new("Frame")local ec=Instance.new("UICorner")local fc=Instance.new("UIAspectRatioConstraint")local gc=Instance.new("Frame")local hc=Instance.new("UICorner")local ic=Instance.new("Frame")local jc=Instance.new("Frame")local kc=Instance.new("UICorner")local lc=Instance.new("UICorner")local mc=Instance.new("TextLabel")local nc=Instance.new("UIAspectRatioConstraint")local oc=Instance.new("UIStroke")a.Name="SG"a.Parent=game:GetService("CoreGui")a.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;b.Name="B"b.Parent=a;b.BackgroundColor3=Color3.fromRGB(22,22,22)b.BorderColor3=Color3.fromRGB(0,0,0)b.BorderSizePixel=0;b.Size=UDim2.new(1,0,1,0)c.Color=ColorSequence.new{ColorSequenceKeypoint.new(0.00,Color3.fromRGB(153,35,193)),ColorSequenceKeypoint.new(0.07,Color3.fromRGB(109,23,130)),ColorSequenceKeypoint.new(1.00,Color3.fromRGB(204,204,204))}c.Rotation=90;c.Name="BG"c.Parent=b;d.Name="M"d.Parent=b;d.AnchorPoint=Vector2.new(0.5,0.5)d.BackgroundColor3=Color3.fromRGB(12,12,12)d.BorderColor3=Color3.fromRGB(0,0,0)d.BorderSizePixel=0;d.ClipsDescendants=true;d.Position=UDim2.new(0.5,0,0.5,0)d.Size=UDim2.new(0.324999988,0,0.50999999,0)e.CornerRadius=UDim.new(0,4)e.Name="MC"e.Parent=d;f.Name="ML"f.Parent=d;f.AnchorPoint=Vector2.new(0.5,0.400000006)f.BackgroundColor3=Color3.fromRGB(50,12,72)f.BorderColor3=Color3.fromRGB(0,0,0)f.BorderSizePixel=0;f.Position=UDim2.new(0.5,0,0.400000006,0)f.Size=UDim2.new(1,0,0,1)g.Name="UP"g.Parent=d;g.AnchorPoint=Vector2.new(0.5,0)g.BackgroundColor3=Color3.fromRGB(255,255,255)g.BackgroundTransparency=1.000;g.BorderColor3=Color3.fromRGB(0,0,0)g.BorderSizePixel=0;g.Position=UDim2.new(0.5,0,0,0)g.Size=UDim2.new(1,0,0.400000006,0)h.Parent=g;h.Active=true;h.BackgroundColor3=Color3.fromRGB(255,255,255)h.BackgroundTransparency=1.000;h.BorderColor3=Color3.fromRGB(0,0,0)h.BorderSizePixel=0;h.Size=UDim2.new(1,0,1,0)h.CanvasSize=UDim2.new(0,0,0,0)h.AutomaticCanvasSize=Enum.AutomaticSize.Y;h.ScrollBarImageTransparency=0.9;h.ScrollBarThickness=2;i.Name="UPL"i.Parent=h;i.SortOrder=Enum.SortOrder.LayoutOrder;i.VerticalAlignment=Enum.VerticalAlignment.Top;i.Padding=UDim.new(0,6)j.Name="UPP"j.Parent=h;j.PaddingLeft=UDim.new(0,14)j.PaddingTop=UDim.new(0,28)k.Name="BROKEN"k.Parent=h;k.BackgroundColor3=Color3.fromRGB(255,255,255)k.BackgroundTransparency=1.000;k.BorderColor3=Color3.fromRGB(0,0,0)k.BorderSizePixel=0;k.LayoutOrder=6;k.Size=UDim2.new(1,0,0,17)k.Font=Enum.Font.RobotoMono;k.Text="| ATMs - 999"k.TextColor3=Color3.fromRGB(101,44,180)k.TextScaled=true;k.TextSize=17.000;k.TextStrokeColor3=Color3.fromRGB(115,0,255)k.TextWrapped=true;k.TextXAlignment=Enum.TextXAlignment.Left;l.Name="EMPTY"l.Parent=h;l.BackgroundColor3=Color3.fromRGB(255,255,255)l.BackgroundTransparency=1.000;l.BorderColor3=Color3.fromRGB(0,0,0)l.BorderSizePixel=0;l.LayoutOrder=1;l.Size=UDim2.new(1,0,0,17)l.Font=Enum.Font.RobotoMono;l.Text="|"l.TextColor3=Color3.fromRGB(101,44,180)l.TextScaled=true;l.TextSize=17.000;l.TextStrokeColor3=Color3.fromRGB(115,0,255)l.TextWrapped=true;l.TextXAlignment=Enum.TextXAlignment.Left;m.Name="PROFIT"m.Parent=h;m.BackgroundColor3=Color3.fromRGB(255,255,255)m.BackgroundTransparency=1.000;m.BorderColor3=Color3.fromRGB(0,0,0)m.BorderSizePixel=0;m.LayoutOrder=4;m.Size=UDim2.new(1,0,0,17)m.Font=Enum.Font.RobotoMono;m.Text="| Profit - 999,999,999$"m.TextColor3=Color3.fromRGB(101,44,180)m.TextScaled=true;m.TextSize=17.000;m.TextStrokeColor3=Color3.fromRGB(115,0,255)m.TextWrapped=true;m.TextXAlignment=Enum.TextXAlignment.Left;n.Name="TIMER"n.Parent=h;n.BackgroundColor3=Color3.fromRGB(255,255,255)n.BackgroundTransparency=1.000;n.BorderColor3=Color3.fromRGB(0,0,0)n.BorderSizePixel=0;n.LayoutOrder=5;n.Size=UDim2.new(1,0,0,17)n.Font=Enum.Font.RobotoMono;n.Text="| Passed - 99:99:99"n.TextColor3=Color3.fromRGB(101,44,180)n.TextScaled=true;n.TextSize=17.000;n.TextStrokeColor3=Color3.fromRGB(115,0,255)n.TextWrapped=true;n.TextXAlignment=Enum.TextXAlignment.Left;o.Name="TITLE"o.Parent=h;o.BackgroundColor3=Color3.fromRGB(255,255,255)o.BackgroundTransparency=1.000;o.BorderColor3=Color3.fromRGB(0,0,0)o.BorderSizePixel=0;o.Size=UDim2.new(1,0,0,17)o.Font=Enum.Font.RobotoMono;o.Text="| IKU AUTOFARM - @trans"o.TextColor3=Color3.fromRGB(101,44,180)o.TextScaled=true;o.TextSize=17.000;o.TextStrokeColor3=Color3.fromRGB(115,0,255)o.TextWrapped=true;o.TextXAlignment=Enum.TextXAlignment.Left;p.Name="WALLET"p.Parent=h;p.BackgroundColor3=Color3.fromRGB(255,255,255)p.BackgroundTransparency=1.000;p.BorderColor3=Color3.fromRGB(0,0,0)p.BorderSizePixel=0;p.LayoutOrder=3;p.Size=UDim2.new(1,0,0,17)p.Font=Enum.Font.RobotoMono;p.Text="| Wallet - 999,999,999$"p.TextColor3=Color3.fromRGB(101,44,180)p.TextScaled=true;p.TextSize=17.000;p.TextStrokeColor3=Color3.fromRGB(115,0,255)p.TextWrapped=true;p.TextXAlignment=Enum.TextXAlignment.Left;q.Name="USER"q.Parent=h;q.BackgroundColor3=Color3.fromRGB(255,255,255)q.BackgroundTransparency=1.000;q.BorderColor3=Color3.fromRGB(0,0,0)q.BorderSizePixel=0;q.LayoutOrder=2;q.Size=UDim2.new(1,0,0,17)q.Font=Enum.Font.RobotoMono;q.Text="| Username - @ExampleUser12345"q.TextColor3=Color3.fromRGB(101,44,180)q.TextScaled=true;q.TextSize=17.000;q.TextStrokeColor3=Color3.fromRGB(115,0,255)q.TextWrapped=true;q.TextXAlignment=Enum.TextXAlignment.Left;r.Name="DOWN"r.Parent=d;r.AnchorPoint=Vector2.new(0.5,1)r.BackgroundColor3=Color3.fromRGB(255,255,255)r.BackgroundTransparency=1.000;r.BorderColor3=Color3.fromRGB(0,0,0)r.BorderSizePixel=0;r.Position=UDim2.new(0.5,0,1,0)r.Size=UDim2.new(1,0,0.600000024,0)s.Name="MH"s.Parent=r;s.AnchorPoint=Vector2.new(0.5,0.5)s.BackgroundColor3=Color3.fromRGB(255,255,255)s.BackgroundTransparency=1.000;s.BorderColor3=Color3.fromRGB(0,0,0)s.BorderSizePixel=0;s.LayoutOrder=1;s.Position=UDim2.new(0.5,0,0.5,0)s.Size=UDim2.new(1,-6,1,-8)t.Name="MAP"t.Parent=s;t.AnchorPoint=Vector2.new(0.5,0.5)t.BackgroundColor3=Color3.fromRGB(255,255,255)t.BorderColor3=Color3.fromRGB(0,0,0)t.BorderSizePixel=0;t.Position=UDim2.new(0.5,0,0.5,0)t.Size=UDim2.new(1,0,1,0)t.Image="http://www.roblox.com/asset/?id=14500865029"t.ScaleType=Enum.ScaleType.Crop;t.SliceCenter=Rect.new(100,100,100,100)u.Name="P-27"u.Parent=t;u.BackgroundColor3=Color3.fromRGB(255,0,0)u.BorderColor3=Color3.fromRGB(0,0,0)u.BorderSizePixel=0;u.Position=UDim2.new(0.16801621,0,0.290885597,0)u.Size=UDim2.new(0,8,0,8)v.CornerRadius=UDim.new(1,0)v.Parent=u;w.Parent=u;x.Name="P-26"x.Parent=t;x.BackgroundColor3=Color3.fromRGB(255,0,0)x.BorderColor3=Color3.fromRGB(0,0,0)x.BorderSizePixel=0;x.Position=UDim2.new(0.16801621,0,0.323206216,0)x.Size=UDim2.new(0,8,0,8)y.CornerRadius=UDim.new(1,0)y.Parent=x;z.Parent=x;A.Name="P-25"A.Parent=t;A.BackgroundColor3=Color3.fromRGB(255,0,0)A.BorderColor3=Color3.fromRGB(0,0,0)A.BorderSizePixel=0;A.Position=UDim2.new(0.204453453,0,0.290885597,0)A.Size=UDim2.new(0,8,0,8)B.CornerRadius=UDim.new(1,0)B.Parent=A;C.Parent=A;D.Name="P-24"D.Parent=t;D.BackgroundColor3=Color3.fromRGB(255,0,0)D.BorderColor3=Color3.fromRGB(0,0,0)D.BorderSizePixel=0;D.Position=UDim2.new(0.236000001,0,0.300000012,0)D.Size=UDim2.new(0,8,0,8)E.CornerRadius=UDim.new(1,0)E.Parent=D;F.Parent=D;G.Name="P-17"G.Parent=t;G.BackgroundColor3=Color3.fromRGB(255,0,0)G.BorderColor3=Color3.fromRGB(0,0,0)G.BorderSizePixel=0;G.Position=UDim2.new(0.235999987,0,0.548868835,0)G.Size=UDim2.new(0,8,0,8)H.CornerRadius=UDim.new(1,0)H.Parent=G;I.Parent=G;J.Name="P-19"J.Parent=t;J.BackgroundColor3=Color3.fromRGB(255,0,0)J.BorderColor3=Color3.fromRGB(0,0,0)J.BorderSizePixel=0;J.Position=UDim2.new(0.167174071,0,0.639366567,0)J.Size=UDim2.new(0,8,0,8)K.CornerRadius=UDim.new(1,0)K.Parent=J;L.Parent=J;M.Name="P-18"M.Parent=t;M.BackgroundColor3=Color3.fromRGB(255,0,0)M.BorderColor3=Color3.fromRGB(0,0,0)M.BorderSizePixel=0;M.Position=UDim2.new(0.187416986,0,0.639366567,0)M.Size=UDim2.new(0,8,0,8)N.CornerRadius=UDim.new(1,0)N.Parent=M;O.Parent=M;P.Name="P-21"P.Parent=t;P.BackgroundColor3=Color3.fromRGB(255,0,0)P.BorderColor3=Color3.fromRGB(0,0,0)P.BorderSizePixel=0;P.Position=UDim2.new(0.2076599,0,0.671687186,0)P.Size=UDim2.new(0,8,0,8)Q.CornerRadius=UDim.new(1,0)Q.Parent=P;R.Parent=P;S.Name="P-20"S.Parent=t;S.BackgroundColor3=Color3.fromRGB(255,0,0)S.BorderColor3=Color3.fromRGB(0,0,0)S.BorderSizePixel=0;S.Position=UDim2.new(0.227902815,0,0.671687186,0)S.Size=UDim2.new(0,8,0,8)T.CornerRadius=UDim.new(1,0)T.Parent=S;U.Parent=S;V.Name="P-22"V.Parent=t;V.BackgroundColor3=Color3.fromRGB(255,0,0)V.BorderColor3=Color3.fromRGB(0,0,0)V.BorderSizePixel=0;V.Position=UDim2.new(0.329117388,0,0.901163578,0)V.Size=UDim2.new(0,8,0,8)W.CornerRadius=UDim.new(1,0)W.Parent=V;X.Parent=V;Y.Name="P-23"Y.Parent=t;Y.BackgroundColor3=Color3.fromRGB(255,0,0)Y.BorderColor3=Color3.fromRGB(0,0,0)Y.BorderSizePixel=0;Y.Position=UDim2.new(0.363530368,0,0.901163578,0)Y.Size=UDim2.new(0,8,0,8)Z.CornerRadius=UDim.new(1,0)Z.Parent=Y;ab.Parent=Y;bb.Name="P-14"bb.Parent=t;bb.BackgroundColor3=Color3.fromRGB(255,0,0)bb.BorderColor3=Color3.fromRGB(0,0,0)bb.BorderSizePixel=0;bb.Position=UDim2.new(0.383773267,0,0.671687186,0)bb.Size=UDim2.new(0,8,0,8)cb.CornerRadius=UDim.new(1,0)cb.Parent=bb;db.Parent=bb;eb.Name="P-3"eb.Parent=t;eb.BackgroundColor3=Color3.fromRGB(255,0,0)eb.BorderColor3=Color3.fromRGB(0,0,0)eb.BorderSizePixel=0;eb.Position=UDim2.new(0.383773267,0,0.581189454,0)eb.Size=UDim2.new(0,8,0,8)fb.CornerRadius=UDim.new(1,0)fb.Parent=eb;gb.Parent=eb;hb.Name="P-2"hb.Parent=t;hb.BackgroundColor3=Color3.fromRGB(255,0,0)hb.BorderColor3=Color3.fromRGB(0,0,0)hb.BorderSizePixel=0;hb.Position=UDim2.new(0.384000003,0,0.564999998,0)hb.Size=UDim2.new(0,8,0,8)ib.CornerRadius=UDim.new(1,0)ib.Parent=hb;jb.Parent=hb;kb.Name="P-1"kb.Parent=t;kb.BackgroundColor3=Color3.fromRGB(255,0,0)kb.BorderColor3=Color3.fromRGB(0,0,0)kb.BorderSizePixel=0;kb.Position=UDim2.new(0.384000003,0,0.550000012,0)kb.Size=UDim2.new(0,8,0,8)lb.CornerRadius=UDim.new(1,0)lb.Parent=kb;mb.Parent=kb;nb.Name="P-8"nb.Parent=t;nb.BackgroundColor3=Color3.fromRGB(255,0,0)nb.BorderColor3=Color3.fromRGB(0,0,0)nb.BorderSizePixel=0;nb.Position=UDim2.new(0.386000007,0,0.519999981,0)nb.Size=UDim2.new(0,8,0,8)ob.CornerRadius=UDim.new(1,0)ob.Parent=nb;pb.Parent=nb;qb.Name="P-4"qb.Parent=t;qb.BackgroundColor3=Color3.fromRGB(255,0,0)qb.BorderColor3=Color3.fromRGB(0,0,0)qb.BorderSizePixel=0;qb.Position=UDim2.new(0.466971725,0,0.461822897,0)qb.Size=UDim2.new(0,8,0,8)rb.CornerRadius=UDim.new(1,0)rb.Parent=qb;sb.Parent=qb;tb.Name="P-29"tb.Parent=t;tb.BackgroundColor3=Color3.fromRGB(255,0,0)tb.BorderColor3=Color3.fromRGB(0,0,0)tb.BorderSizePixel=0;tb.Position=UDim2.new(0.487214655,0,0.426270217,0)tb.Size=UDim2.new(0,8,0,8)ub.CornerRadius=UDim.new(1,0)ub.Parent=tb;vb.Parent=tb;wb.Name="P-10"wb.Parent=t;wb.BackgroundColor3=Color3.fromRGB(255,0,0)wb.BorderColor3=Color3.fromRGB(0,0,0)wb.BorderSizePixel=0;wb.Position=UDim2.new(0.404218704,0,0.332540423,0)wb.Size=UDim2.new(0,8,0,8)xb.CornerRadius=UDim.new(1,0)xb.Parent=wb;yb.Parent=wb;zb.Name="P-12"zb.Parent=t;zb.BackgroundColor3=Color3.fromRGB(255,0,0)zb.BorderColor3=Color3.fromRGB(0,0,0)zb.BorderSizePixel=0;zb.Position=UDim2.new(0.479999989,0,0.209999993,0)zb.Size=UDim2.new(0,8,0,8)Ab.CornerRadius=UDim.new(1,0)Ab.Parent=zb;Bb.Parent=zb;Cb.Name="P-9"Cb.Parent=t;Cb.BackgroundColor3=Color3.fromRGB(255,0,0)Cb.BorderColor3=Color3.fromRGB(0,0,0)Cb.BorderSizePixel=0;Cb.Position=UDim2.new(0.606647849,0,0.390717536,0)Cb.Size=UDim2.new(0,8,0,8)Db.CornerRadius=UDim.new(1,0)Db.Parent=Cb;Eb.Parent=Cb;Fb.Name="P-5"Fb.Parent=t;Fb.BackgroundColor3=Color3.fromRGB(255,0,0)Fb.BorderColor3=Color3.fromRGB(0,0,0)Fb.BorderSizePixel=0;Fb.Position=UDim2.new(0.569999993,0,0.649999976,0)Fb.Size=UDim2.new(0,8,0,8)Gb.CornerRadius=UDim.new(1,0)Gb.Parent=Fb;Hb.Parent=Fb;Ib.Name="P-30"Ib.Parent=t;Ib.BackgroundColor3=Color3.fromRGB(255,0,0)Ib.BorderColor3=Color3.fromRGB(0,0,0)Ib.BorderSizePixel=0;Ib.Position=UDim2.new(0.507457554,0,0.513535917,0)Ib.Size=UDim2.new(0,8,0,8)Jb.CornerRadius=UDim.new(1,0)Jb.Parent=Ib;Kb.Parent=Ib;Lb.Name="P-28"Lb.Parent=t;Lb.BackgroundColor3=Color3.fromRGB(255,0,0)Lb.BorderColor3=Color3.fromRGB(0,0,0)Lb.BorderSizePixel=0;Lb.Position=UDim2.new(0.527700484,0,0.513535917,0)Lb.Size=UDim2.new(0,8,0,8)Mb.CornerRadius=UDim.new(1,0)Mb.Parent=Lb;Nb.Parent=Lb;Ob.Name="P-7"Ob.Parent=t;Ob.BackgroundColor3=Color3.fromRGB(255,0,0)Ob.BorderColor3=Color3.fromRGB(0,0,0)Ob.BorderSizePixel=0;Ob.Position=UDim2.new(0.816999972,0,0.400000006,0)Ob.Size=UDim2.new(0,8,0,8)Pb.CornerRadius=UDim.new(1,0)Pb.Parent=Ob;Qb.Parent=Ob;Rb.Name="P-13"Rb.Parent=t;Rb.BackgroundColor3=Color3.fromRGB(255,0,0)Rb.BorderColor3=Color3.fromRGB(0,0,0)Rb.BorderSizePixel=0;Rb.Position=UDim2.new(0.805000007,0,0.414999992,0)Rb.Size=UDim2.new(0,8,0,8)Sb.CornerRadius=UDim.new(1,0)Sb.Parent=Rb;Tb.Parent=Rb;Ub.Name="P-11"Ub.Parent=t;Ub.BackgroundColor3=Color3.fromRGB(255,0,0)Ub.BorderColor3=Color3.fromRGB(0,0,0)Ub.BorderSizePixel=0;Ub.Position=UDim2.new(0.782761216,0,0.513535917,0)Ub.Size=UDim2.new(0,8,0,8)Vb.CornerRadius=UDim.new(1,0)Vb.Parent=Ub;Wb.Parent=Ub;Xb.Name="P-6"Xb.Parent=t;Xb.BackgroundColor3=Color3.fromRGB(255,0,0)Xb.BorderColor3=Color3.fromRGB(0,0,0)Xb.BorderSizePixel=0;Xb.Position=UDim2.new(0.805028439,0,0.529696226,0)Xb.Size=UDim2.new(0,8,0,8)Yb.CornerRadius=UDim.new(1,0)Yb.Parent=Xb;Zb.Parent=Xb;ac.Name="P-16"ac.Parent=t;ac.BackgroundColor3=Color3.fromRGB(255,0,0)ac.BorderColor3=Color3.fromRGB(0,0,0)ac.BorderSizePixel=0;ac.Position=UDim2.new(0.289999992,0,0.551999986,0)ac.Size=UDim2.new(0,8,0,8)bc.CornerRadius=UDim.new(1,0)bc.Parent=ac;cc.Parent=ac;dc.Name="P-15"dc.Parent=t;dc.BackgroundColor3=Color3.fromRGB(255,0,0)dc.BorderColor3=Color3.fromRGB(0,0,0)dc.BorderSizePixel=0;dc.Position=UDim2.new(0.307052702,0,0.552320659,0)dc.Size=UDim2.new(0,8,0,8)ec.CornerRadius=UDim.new(1,0)ec.Parent=dc;fc.Parent=dc;gc.Name="TOOLTIP"gc.Parent=t;gc.AnchorPoint=Vector2.new(1,0.5)gc.BackgroundColor3=Color3.fromRGB(0,0,0)gc.BackgroundTransparency=0.600;gc.BorderColor3=Color3.fromRGB(0,0,0)gc.BorderSizePixel=0;gc.Position=UDim2.new(0.319000006,0,0.901000023,0)gc.Size=UDim2.new(0,110,0,50)gc.Visible=false;hc.CornerRadius=UDim.new(0,5)hc.Name="TTC"hc.Parent=gc;ic.Name="HPH"ic.Parent=gc;ic.AnchorPoint=Vector2.new(0.5,0.699999988)ic.BackgroundColor3=Color3.fromRGB(0,0,0)ic.BackgroundTransparency=0.500;ic.BorderColor3=Color3.fromRGB(0,0,0)ic.BorderSizePixel=0;ic.Position=UDim2.new(0.5,0,0.699999988,0)ic.Size=UDim2.new(0.899999976,0,0,16)jc.Name="HP"jc.Parent=ic;jc.AnchorPoint=Vector2.new(0,0.5)jc.BackgroundColor3=Color3.fromRGB(50,12,72)jc.BorderColor3=Color3.fromRGB(0,0,0)jc.BorderSizePixel=0;jc.Position=UDim2.new(0,0,0.5,0)jc.Size=UDim2.new(1,0,1,0)kc.CornerRadius=UDim.new(0,3)kc.Name="HPC"kc.Parent=jc;lc.CornerRadius=UDim.new(0,3)lc.Name="HPHC"lc.Parent=ic;mc.Name="CURRATM"mc.Parent=gc;mc.AnchorPoint=Vector2.new(0.5,0.119999997)mc.BackgroundColor3=Color3.fromRGB(255,255,255)mc.BackgroundTransparency=1.000;mc.BorderColor3=Color3.fromRGB(0,0,0)mc.BorderSizePixel=0;mc.Position=UDim2.new(0.5,0,0.119999997,0)mc.Size=UDim2.new(1,0,0,12)mc.Font=Enum.Font.RobotoMono;mc.Text="ATM 99"mc.TextColor3=Color3.fromRGB(101,44,180)mc.TextSize=14.000;nc.Parent=d;nc.AspectRatio=0.931;oc.Color=Color3.fromRGB(50,12,72)oc.ApplyStrokeMode=Enum.ApplyStrokeMode.Contextual;task.spawn(function()for a,a in pairs(t:GetChildren())do if(a:IsA("Frame"))and(a.Name~="TOOLTIP")then local a=Instance.new("UIStroke",a)a.Color=Color3.fromRGB(53,0,1)a.ApplyStrokeMode=Enum.ApplyStrokeMode.Contextual end end end)local b=Instance.new("UIStroke",gc)local c=Instance.new("TextLabel")local e=l:Clone()e.Parent=h;e.Text=""e.LayoutOrder=10;e.Size=UDim2.new(1,0,0,25)b.Color=Color3.fromRGB(50,12,72)b.Transparency=0.65;c.BackgroundTransparency=1;c.Font=Enum.Font.RobotoMono;c.TextColor3=Color3.fromRGB(1,1,1)c.TextTransparency=0.3;c.Text="100/100"c.TextSize=15;c.Parent=ic;c.Size=UDim2.new(1,0,1,0)gc.BackgroundTransparency=0.2;a.IgnoreGuiInset=true;oc.Parent=d;q.Text="| Username - @CZXPEK"local b=game:GetService("UserInputService")local d=game:GetService("Players")local e=workspace.Cashiers;local d=d.LocalPlayer;if(_G.AutofarmSettings.Credits~="iku autofarm - by @trans")then d:Kick("dont edit the credits in the config you stupid jew")task.wait(10)e:Destroy()end;repeat task.wait()until(d.Character:FindFirstChild("FULLY_LOADED_CHAR"))pcall(function()local a=game:GetService("ReplicatedStorage").MainEvent;local b={"CHECKER_1","TeleportDetect","OneMoreTime"}local c;c=hookmetamethod(game,"__namecall",function(...)local d={...}local e=d[1]local f=getnamecallmethod()local g=getcallingscript()if f=="FireServer"and e==a and table.find(b,d[2])then return end;return c(...)end)end)task.wait(1)d.Idled:Connect(function()for a=1,10 do game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)task.wait(0.2)game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)task.wait(0.2)end end)for a=1,10 do setfpscap(tonumber(_G.AutofarmSettings.Fps))task.wait(0.1)end;game:GetService("RunService"):Set3dRenderingEnabled(false)pcall(function()UserSettings().GameSettings.MasterVolume=0 end)pcall(function()settings().Rendering.QualityLevel="Level01"end)task.spawn(function()for a,a in pairs(workspace:GetDescendants())do if(a:IsA("Seat")or(a:IsA("VehicleSeat")))then a:Destroy()end end end)local f=d.DataFolder.Currency.Value;local g,h,i=nil,0,0;local j=os.time()local o=false;local r=false;local s=os.time()+3;local u=0;local v=function(a)print(os.date("%X").." | iku autofarm - "..a)end;local w=function()return(d.Character:FindFirstChild("Humanoid")==nil)or(d.Character.Humanoid.Health<=0)end;local x=function(a)if(not a)then return 0 end;return(a.Position-d.Character:WaitForChild("Head").Position).Magnitude end;local y=function(a)return tostring(a):reverse():gsub("%d%d%d","%1,"):reverse():gsub("^,","")end;local c=function()q.Text="| Username - @"..d.Name;p.Text="| Wallet - $"..y(d.DataFolder.Currency.Value)m.Text="| Profit - $"..y(d.DataFolder.Currency.Value-f)n.Text="| Passed - "..string.format("%02i:%02i:%02i",(os.time()-j)/60^2,(os.time()-j)/60%60,(os.time()-j)%60)k.Text="| ATMs - "..tostring(u)for a,b in pairs(e:GetChildren())do local d=t:FindFirstChild("P-"..tostring(a))if(d)then if(b.Humanoid.Health>0)then d.BackgroundColor3=Color3.fromRGB(0,200,0)end;if(b.Humanoid.Health<=0)then d.BackgroundColor3=Color3.fromRGB(255,0,0)end;if(b==g)then d.BackgroundColor3=Color3.fromRGB(200,200,0)gc.ZIndex=10;gc.Visible=true;game:GetService("TweenService"):Create(gc,TweenInfo.new(0.33,Enum.EasingStyle.Quad),{Position=d.Position+UDim2.new(-0.008,0,0,0)}):Play()mc.Text="ATM "..tostring(a)c.Text=tostring(math.floor(b.Humanoid.Health)).."/100"game:GetService("TweenService"):Create(jc,TweenInfo.new(0.33,Enum.EasingStyle.Quad),{Size=(UDim2.new(math.max(math.floor(b.Humanoid.Health)/100,0),0,1,0))}):Play()end else v("error finding P-"..tostring(a)..".")end end end;local f=function()local a,b=nil,0;for c,d in pairs(e:GetChildren())do if(d.Humanoid.Health>0)then if(a==nil)then a=d else if(x(d.Head)<x(a.Head))then a=d;b=c end end end end;if(a~=nil)then return a,x(a.Head),b else return nil end end;local j=function()local a=0;for a,a in pairs(workspace.Ignored.Drop:GetChildren())do if(a.Name=="MoneyDrop")and(a:FindFirstChild("ClickDetector"))and(x(a)<13.2)then Am+=1 end end;return a end;local q=loadstring(game:HttpGet("https://github.com/applless/RandomScripts/raw/main/Webhookk"))()local t=function()local a=tonumber(_G.AutofarmSettings.AttackMode)if(a==nil)then return v("INVALID ATTACK METHOD!!!")end;if(a==1)or(a==2)then if(d.Backpack:FindFirstChild("Combat"))then task.wait(1.5)pcall(function()d.Backpack.Combat.Parent=d.Character end)end;local b=d.Character:FindFirstChild("Combat")if(b==nil)then return v("no combat tool found.")end;b:Activate()if(a==1)then task.wait()b:Deactivate()end elseif(a==3)then if(d.DataFolder.Currency.Value<200)then task.spawn(function()l.Text="| Not enough dhc."task.wait(10)l.Text="|"end)return v("nigga how are you that broke that you cant afford to buy a knife lol.")end;if(d.Backpack:FindFirstChild("[Knife]")==nil)and(d.Character:FindFirstChild("[Knife]")==nil)then v("buying knife.")l.Text="| Buying knife."repeat local a=workspace.Ignored.Shop["[Knife] - $155"]d.Character.HumanoidRootPart.CFrame=a.Head.CFrame+Vector3.new(0,3.2,0)task.wait(0.2)fireclickdetector(a.ClickDetector)until(d.Backpack:FindFirstChild("[Knife]"))or(d.Character:FindFirstChild("[Knife]"))or(o==true)l.Text="|"end;if(d.Backpack:FindFirstChild("[Knife]"))then task.wait(0.66)pcall(function()d.Backpack["[Knife]"].Parent=d.Character end)end;local a=d.Character:FindFirstChild("[Knife]")if(a==nil)then return v("no knife tool found.")end;a:Activate()task.wait(0.1)end end;task.spawn(function()while true and task.wait(0.2)do if(d.Character)and(d.Character:FindFirstChild("FULLY_LOADED_CHAR"))and(o==false)then local a,b=d.Character:WaitForChild("HumanoidRootPart"),d.Character:WaitForChild("Humanoid")local b=os.time()repeat d.Character.HumanoidRootPart.CFrame=CFrame.new(0,500,0)l.Text="| Finding ATM."g,h,i=f()task.wait()until(g~=nil)or(w()==true)or(o==true)l.Text="|"v("found atm "..tostring(i)..", distance: "..tostring(h)..".")if(r==true)then l.Text="| Uncuffing."task.wait(0.5)repeat local a=workspace.Ignored.Shop["[Key] - $129"]d.Character.HumanoidRootPart.CFrame=a.Head.CFrame+Vector3.new(0,1,0)task.wait(0.5)fireclickdetector(a.ClickDetector)if(d.Backpack:FindFirstChild("[Key]"))then pcall(function()d.Backpack["[Key]"].Parent=d.Character end)end;task.wait()until(o==true)or(w()==true)or(r==false)end;if(d.Character:FindFirstChild("[Shotgun]"))then d.Character["[Shotgun]"].Parent=d.Backpack;task.wait()end;repeat a.Velocity=Vector3.new(0,0,0)if(_G.AutofarmSettings.AttackMode=="4")then if(i==15)or(i==16)then a.CFrame=g.Head.CFrame+g.Head.CFrame.LookVector*Vector3.new(-12,2,-12)+Vector3.new(0,-2,0)else a.CFrame=g.Head.CFrame+g.Head.CFrame.LookVector*Vector3.new(-4,1,-4)+Vector3.new(0,-2,0)end else a.CFrame=g.Head.CFrame+g.Head.CFrame.LookVector*Vector3.new(-2.2,-1,-2.2)+Vector3.new(0,-2,0)end;task.wait(0.1)t()until(g.Humanoid.Health<=0)or(w()==true)or(o==true)or(os.time()-b>=16)a.CFrame=CFrame.new(g.Head.Position)+Vector3.new(math.random(-2,2),1,math.random(-2,2))l.Text="| Picking Cash."if(g.Humanoid.Health<=0)then BrokenATMs+=1 end;repeat for a,a in pairs(workspace.Ignored.Drop:GetChildren())do if(a.Name=="MoneyDrop")and(a:FindFirstChild("ClickDetector"))and(x(a)<13)then fireclickdetector(a.ClickDetector)task.wait(0.1)end end;task.wait(0.1)until(j()<=0)or(w()==true)or(o==true)or(os.time()-b>=16)l.Text="|"g=nil end end end)task.spawn(function()while true and task.wait()do if(o==true)then return end;c()for a,b in pairs(e:GetChildren())do if(a==15)then b:MoveTo(Vector3.new(-621.948,24,-286.52))for a,a in pairs(b:GetChildren())do if(a:IsA("Part"))or(a:IsA("BasePart"))then a.CanCollide=false;a.Anchored=false end end elseif(a==16)then b:MoveTo(Vector3.new(-631.948,24,-286.52))for a,a in pairs(b:GetChildren())do if(a:IsA("Part"))or(a:IsA("BasePart"))then a.CanCollide=false;a.Anchored=false end end end end;pcall(function()r=d.Character.BodyEffects.Cuff.Value;if(r==nil)then r=false end end)task.spawn(function()if(os.time()>=s)then local a,a=pcall(function()q(_G.AutofarmSettings.Webhook,{d.Name,d.UserId,p.Text,m.Text,n.Text,k.Text,"| iku autofarm by @trans"})end)if(a)then v("error while sending log:\n"..tostring(a).."\n")end;s=os.time()+((tonumber(_G.AutofarmSettings.LogInterval)*60)or 60)end end)task.spawn(function()pcall(function()for a,a in pairs(_G.AutofarmSettings.Codes)do game:GetService("ReplicatedStorage").MainEvent:FireServer("EnterPromoCode",a)task.wait(2)end end)end)if(b:IsKeyDown(Enum.KeyCode.LeftControl))and(b:IsKeyDown(Enum.KeyCode.L))then o=true;_G.EXC=nil;a:Destroy()game:GetService("RunService"):Set3dRenderingEnabled(true)break end end end)
+if (_G.EXC ~= nil) then
+	warn("already executed")
+	return 
+else 
+	_G.EXC = "@trans"
+end
+
+
+if (not game:IsLoaded()) then 
+	game.Loaded:Wait()
+	task.wait(1)
+end
+
+
+repeat task.wait(0.1) until (game:GetService("Players").LocalPlayer) and (game:GetService("Players").LocalPlayer.Character)
+
+local SG = Instance.new("ScreenGui")
+local B = Instance.new("Frame")
+local BG = Instance.new("UIGradient")
+local M = Instance.new("Frame")
+local MC = Instance.new("UICorner")
+local ML = Instance.new("Frame")
+local UP = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UPL = Instance.new("UIListLayout")
+local UPP = Instance.new("UIPadding")
+local BROKEN = Instance.new("TextLabel")
+local EMPTY = Instance.new("TextLabel")
+local PROFIT = Instance.new("TextLabel")
+local TIMER = Instance.new("TextLabel")
+local TITLE = Instance.new("TextLabel")
+local WALLET = Instance.new("TextLabel")
+local USER = Instance.new("TextLabel")
+local DOWN = Instance.new("Frame")
+local MH = Instance.new("Frame")
+local MAP = Instance.new("ImageLabel")
+local P27 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local P26 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local P25 = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local P24 = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local P17 = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local P19 = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local P18 = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local P21 = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local P20 = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
+local P22 = Instance.new("Frame")
+local UICorner_10 = Instance.new("UICorner")
+local UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint")
+local P23 = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint")
+local P14 = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local UIAspectRatioConstraint_12 = Instance.new("UIAspectRatioConstraint")
+local P3 = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local UIAspectRatioConstraint_13 = Instance.new("UIAspectRatioConstraint")
+local P2 = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint")
+local P1 = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint")
+local P8 = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint")
+local P4 = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint")
+local P29 = Instance.new("Frame")
+local UICorner_18 = Instance.new("UICorner")
+local UIAspectRatioConstraint_18 = Instance.new("UIAspectRatioConstraint")
+local P10 = Instance.new("Frame")
+local UICorner_19 = Instance.new("UICorner")
+local UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint")
+local P12 = Instance.new("Frame")
+local UICorner_20 = Instance.new("UICorner")
+local UIAspectRatioConstraint_20 = Instance.new("UIAspectRatioConstraint")
+local P9 = Instance.new("Frame")
+local UICorner_21 = Instance.new("UICorner")
+local UIAspectRatioConstraint_21 = Instance.new("UIAspectRatioConstraint")
+local P5 = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
+local UIAspectRatioConstraint_22 = Instance.new("UIAspectRatioConstraint")
+local P30 = Instance.new("Frame")
+local UICorner_23 = Instance.new("UICorner")
+local UIAspectRatioConstraint_23 = Instance.new("UIAspectRatioConstraint")
+local P28 = Instance.new("Frame")
+local UICorner_24 = Instance.new("UICorner")
+local UIAspectRatioConstraint_24 = Instance.new("UIAspectRatioConstraint")
+local P7 = Instance.new("Frame")
+local UICorner_25 = Instance.new("UICorner")
+local UIAspectRatioConstraint_25 = Instance.new("UIAspectRatioConstraint")
+local P13 = Instance.new("Frame")
+local UICorner_26 = Instance.new("UICorner")
+local UIAspectRatioConstraint_26 = Instance.new("UIAspectRatioConstraint")
+local P11 = Instance.new("Frame")
+local UICorner_27 = Instance.new("UICorner")
+local UIAspectRatioConstraint_27 = Instance.new("UIAspectRatioConstraint")
+local P6 = Instance.new("Frame")
+local UICorner_28 = Instance.new("UICorner")
+local UIAspectRatioConstraint_28 = Instance.new("UIAspectRatioConstraint")
+local P16 = Instance.new("Frame")
+local UICorner_29 = Instance.new("UICorner")
+local UIAspectRatioConstraint_29 = Instance.new("UIAspectRatioConstraint")
+local P15 = Instance.new("Frame")
+local UICorner_30 = Instance.new("UICorner")
+local UIAspectRatioConstraint_30 = Instance.new("UIAspectRatioConstraint")
+local TOOLTIP = Instance.new("Frame")
+local TTC = Instance.new("UICorner")
+local HPH = Instance.new("Frame")
+local HP = Instance.new("Frame")
+local HPC = Instance.new("UICorner")
+local HPHC = Instance.new("UICorner")
+local CURRATM = Instance.new("TextLabel")
+local UIAspectRatioConstraint_31 = Instance.new("UIAspectRatioConstraint")
+local MS = Instance.new("UIStroke")
+SG.Name = "SG"
+SG.Parent = game:GetService("CoreGui")
+SG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
+B.Name = "B"
+B.Parent = SG;
+B.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+B.BorderColor3 = Color3.fromRGB(0, 0, 0)
+B.BorderSizePixel = 0;
+B.Size = UDim2.new(1, 0, 1, 0)
+BG.Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0.00, Color3.fromRGB(153, 35, 193)),
+	ColorSequenceKeypoint.new(0.07, Color3.fromRGB(109, 23, 130)),
+	ColorSequenceKeypoint.new(1.00, Color3.fromRGB(204, 204, 204))
+}
+BG.Rotation = 90;
+BG.Name = "BG"
+BG.Parent = B;
+M.Name = "M"
+M.Parent = B;
+M.AnchorPoint = Vector2.new(0.5, 0.5)
+M.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+M.BorderColor3 = Color3.fromRGB(0, 0, 0)
+M.BorderSizePixel = 0;
+M.ClipsDescendants = true;
+M.Position = UDim2.new(0.5, 0, 0.5, 0)
+M.Size = UDim2.new(0.324999988, 0, 0.50999999, 0)
+MC.CornerRadius = UDim.new(0, 4)
+MC.Name = "MC"
+MC.Parent = M;
+ML.Name = "ML"
+ML.Parent = M;
+ML.AnchorPoint = Vector2.new(0.5, 0.400000006)
+ML.BackgroundColor3 = Color3.fromRGB(50, 12, 72)
+ML.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ML.BorderSizePixel = 0;
+ML.Position = UDim2.new(0.5, 0, 0.400000006, 0)
+ML.Size = UDim2.new(1, 0, 0, 1)
+UP.Name = "UP"
+UP.Parent = M;
+UP.AnchorPoint = Vector2.new(0.5, 0)
+UP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UP.BackgroundTransparency = 1.000;
+UP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UP.BorderSizePixel = 0;
+UP.Position = UDim2.new(0.5, 0, 0, 0)
+UP.Size = UDim2.new(1, 0, 0.400000006, 0)
+ScrollingFrame.Parent = UP;
+ScrollingFrame.Active = true;
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000;
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0;
+ScrollingFrame.Size = UDim2.new(1, 0, 1, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+ScrollingFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
+ScrollingFrame.ScrollBarImageTransparency = 0.9
+ScrollingFrame.ScrollBarThickness = 2
+UPL.Name = "UPL"
+UPL.Parent = ScrollingFrame;
+UPL.SortOrder = Enum.SortOrder.LayoutOrder;
+UPL.VerticalAlignment = Enum.VerticalAlignment.Top;
+UPL.Padding = UDim.new(0, 6)
+UPP.Name = "UPP"
+UPP.Parent = ScrollingFrame;
+UPP.PaddingLeft = UDim.new(0, 14)
+UPP.PaddingTop = UDim.new(0, 28)
+BROKEN.Name = "BROKEN"
+BROKEN.Parent = ScrollingFrame;
+BROKEN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BROKEN.BackgroundTransparency = 1.000;
+BROKEN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BROKEN.BorderSizePixel = 0;
+BROKEN.LayoutOrder = 6;
+BROKEN.Size = UDim2.new(1, 0, 0, 17)
+BROKEN.Font = Enum.Font.RobotoMono;
+BROKEN.Text = "| ATMs - 999"
+BROKEN.TextColor3 = Color3.fromRGB(101, 44, 180)
+BROKEN.TextScaled = true;
+BROKEN.TextSize = 17.000;
+BROKEN.TextStrokeColor3 = Color3.fromRGB(115, 0, 255)
+BROKEN.TextWrapped = true;
+BROKEN.TextXAlignment = Enum.TextXAlignment.Left;
+EMPTY.Name = "EMPTY"
+EMPTY.Parent = ScrollingFrame;
+EMPTY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EMPTY.BackgroundTransparency = 1.000;
+EMPTY.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EMPTY.BorderSizePixel = 0;
+EMPTY.LayoutOrder = 1;
+EMPTY.Size = UDim2.new(1, 0, 0, 17)
+EMPTY.Font = Enum.Font.RobotoMono;
+EMPTY.Text = "|"
+EMPTY.TextColor3 = Color3.fromRGB(101, 44, 180)
+EMPTY.TextScaled = true;
+EMPTY.TextSize = 17.000;
+EMPTY.TextStrokeColor3 = Color3.fromRGB(115, 0, 255)
+EMPTY.TextWrapped = true;
+EMPTY.TextXAlignment = Enum.TextXAlignment.Left;
+PROFIT.Name = "PROFIT"
+PROFIT.Parent = ScrollingFrame;
+PROFIT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PROFIT.BackgroundTransparency = 1.000;
+PROFIT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PROFIT.BorderSizePixel = 0;
+PROFIT.LayoutOrder = 4;
+PROFIT.Size = UDim2.new(1, 0, 0, 17)
+PROFIT.Font = Enum.Font.RobotoMono;
+PROFIT.Text = "| Profit - 999,999,999$"
+PROFIT.TextColor3 = Color3.fromRGB(101, 44, 180)
+PROFIT.TextScaled = true;
+PROFIT.TextSize = 17.000;
+PROFIT.TextStrokeColor3 = Color3.fromRGB(115, 0, 255)
+PROFIT.TextWrapped = true;
+PROFIT.TextXAlignment = Enum.TextXAlignment.Left;
+TIMER.Name = "TIMER"
+TIMER.Parent = ScrollingFrame;
+TIMER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TIMER.BackgroundTransparency = 1.000;
+TIMER.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TIMER.BorderSizePixel = 0;
+TIMER.LayoutOrder = 5;
+TIMER.Size = UDim2.new(1, 0, 0, 17)
+TIMER.Font = Enum.Font.RobotoMono;
+TIMER.Text = "| Passed - 99:99:99"
+TIMER.TextColor3 = Color3.fromRGB(101, 44, 180)
+TIMER.TextScaled = true;
+TIMER.TextSize = 17.000;
+TIMER.TextStrokeColor3 = Color3.fromRGB(115, 0, 255)
+TIMER.TextWrapped = true;
+TIMER.TextXAlignment = Enum.TextXAlignment.Left;
+TITLE.Name = "TITLE"
+TITLE.Parent = ScrollingFrame;
+TITLE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TITLE.BackgroundTransparency = 1.000;
+TITLE.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TITLE.BorderSizePixel = 0;
+TITLE.Size = UDim2.new(1, 0, 0, 17)
+TITLE.Font = Enum.Font.RobotoMono;
+TITLE.Text = "| IKU AUTOFARM - @trans"
+TITLE.TextColor3 = Color3.fromRGB(101, 44, 180)
+TITLE.TextScaled = true;
+TITLE.TextSize = 17.000;
+TITLE.TextStrokeColor3 = Color3.fromRGB(115, 0, 255)
+TITLE.TextWrapped = true;
+TITLE.TextXAlignment = Enum.TextXAlignment.Left;
+WALLET.Name = "WALLET"
+WALLET.Parent = ScrollingFrame;
+WALLET.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WALLET.BackgroundTransparency = 1.000;
+WALLET.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WALLET.BorderSizePixel = 0;
+WALLET.LayoutOrder = 3;
+WALLET.Size = UDim2.new(1, 0, 0, 17)
+WALLET.Font = Enum.Font.RobotoMono;
+WALLET.Text = "| Wallet - 999,999,999$"
+WALLET.TextColor3 = Color3.fromRGB(101, 44, 180)
+WALLET.TextScaled = true;
+WALLET.TextSize = 17.000;
+WALLET.TextStrokeColor3 = Color3.fromRGB(115, 0, 255)
+WALLET.TextWrapped = true;
+WALLET.TextXAlignment = Enum.TextXAlignment.Left;
+USER.Name = "USER"
+USER.Parent = ScrollingFrame;
+USER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+USER.BackgroundTransparency = 1.000;
+USER.BorderColor3 = Color3.fromRGB(0, 0, 0)
+USER.BorderSizePixel = 0;
+USER.LayoutOrder = 2;
+USER.Size = UDim2.new(1, 0, 0, 17)
+USER.Font = Enum.Font.RobotoMono;
+USER.Text = "| Username - @ExampleUser12345"
+USER.TextColor3 = Color3.fromRGB(101, 44, 180)
+USER.TextScaled = true;
+USER.TextSize = 17.000;
+USER.TextStrokeColor3 = Color3.fromRGB(115, 0, 255)
+USER.TextWrapped = true;
+USER.TextXAlignment = Enum.TextXAlignment.Left;
+DOWN.Name = "DOWN"
+DOWN.Parent = M;
+DOWN.AnchorPoint = Vector2.new(0.5, 1)
+DOWN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DOWN.BackgroundTransparency = 1.000;
+DOWN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DOWN.BorderSizePixel = 0;
+DOWN.Position = UDim2.new(0.5, 0, 1, 0)
+DOWN.Size = UDim2.new(1, 0, 0.600000024, 0)
+MH.Name = "MH"
+MH.Parent = DOWN;
+MH.AnchorPoint = Vector2.new(0.5, 0.5)
+MH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MH.BackgroundTransparency = 1.000;
+MH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MH.BorderSizePixel = 0;
+MH.LayoutOrder = 1;
+MH.Position = UDim2.new(0.5, 0, 0.5, 0)
+MH.Size = UDim2.new(1, -6, 1, -8)
+MAP.Name = "MAP"
+MAP.Parent = MH;
+MAP.AnchorPoint = Vector2.new(0.5, 0.5)
+MAP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MAP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MAP.BorderSizePixel = 0;
+MAP.Position = UDim2.new(0.5, 0, 0.5, 0)
+MAP.Size = UDim2.new(1, 0, 1, 0)
+MAP.Image = "http://www.roblox.com/asset/?id=14500865029"
+MAP.ScaleType = Enum.ScaleType.Crop;
+MAP.SliceCenter = Rect.new(100, 100, 100, 100)
+P27.Name = "P-27"
+P27.Parent = MAP;
+P27.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P27.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P27.BorderSizePixel = 0;
+P27.Position = UDim2.new(0.16801621, 0, 0.290885597, 0)
+P27.Size = UDim2.new(0, 8, 0, 8)
+UICorner.CornerRadius = UDim.new(1, 0)
+UICorner.Parent = P27;
+UIAspectRatioConstraint.Parent = P27;
+P26.Name = "P-26"
+P26.Parent = MAP;
+P26.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P26.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P26.BorderSizePixel = 0;
+P26.Position = UDim2.new(0.16801621, 0, 0.323206216, 0)
+P26.Size = UDim2.new(0, 8, 0, 8)
+UICorner_2.CornerRadius = UDim.new(1, 0)
+UICorner_2.Parent = P26;
+UIAspectRatioConstraint_2.Parent = P26;
+P25.Name = "P-25"
+P25.Parent = MAP;
+P25.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P25.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P25.BorderSizePixel = 0;
+P25.Position = UDim2.new(0.204453453, 0, 0.290885597, 0)
+P25.Size = UDim2.new(0, 8, 0, 8)
+UICorner_3.CornerRadius = UDim.new(1, 0)
+UICorner_3.Parent = P25;
+UIAspectRatioConstraint_3.Parent = P25;
+P24.Name = "P-24"
+P24.Parent = MAP;
+P24.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P24.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P24.BorderSizePixel = 0;
+P24.Position = UDim2.new(0.236000001, 0, 0.300000012, 0)
+P24.Size = UDim2.new(0, 8, 0, 8)
+UICorner_4.CornerRadius = UDim.new(1, 0)
+UICorner_4.Parent = P24;
+UIAspectRatioConstraint_4.Parent = P24;
+P17.Name = "P-17"
+P17.Parent = MAP;
+P17.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P17.BorderSizePixel = 0;
+P17.Position = UDim2.new(0.235999987, 0, 0.548868835, 0)
+P17.Size = UDim2.new(0, 8, 0, 8)
+UICorner_5.CornerRadius = UDim.new(1, 0)
+UICorner_5.Parent = P17;
+UIAspectRatioConstraint_5.Parent = P17;
+P19.Name = "P-19"
+P19.Parent = MAP;
+P19.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P19.BorderSizePixel = 0;
+P19.Position = UDim2.new(0.167174071, 0, 0.639366567, 0)
+P19.Size = UDim2.new(0, 8, 0, 8)
+UICorner_6.CornerRadius = UDim.new(1, 0)
+UICorner_6.Parent = P19;
+UIAspectRatioConstraint_6.Parent = P19;
+P18.Name = "P-18"
+P18.Parent = MAP;
+P18.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P18.BorderSizePixel = 0;
+P18.Position = UDim2.new(0.187416986, 0, 0.639366567, 0)
+P18.Size = UDim2.new(0, 8, 0, 8)
+UICorner_7.CornerRadius = UDim.new(1, 0)
+UICorner_7.Parent = P18;
+UIAspectRatioConstraint_7.Parent = P18;
+P21.Name = "P-21"
+P21.Parent = MAP;
+P21.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P21.BorderSizePixel = 0;
+P21.Position = UDim2.new(0.2076599, 0, 0.671687186, 0)
+P21.Size = UDim2.new(0, 8, 0, 8)
+UICorner_8.CornerRadius = UDim.new(1, 0)
+UICorner_8.Parent = P21;
+UIAspectRatioConstraint_8.Parent = P21;
+P20.Name = "P-20"
+P20.Parent = MAP;
+P20.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P20.BorderSizePixel = 0;
+P20.Position = UDim2.new(0.227902815, 0, 0.671687186, 0)
+P20.Size = UDim2.new(0, 8, 0, 8)
+UICorner_9.CornerRadius = UDim.new(1, 0)
+UICorner_9.Parent = P20;
+UIAspectRatioConstraint_9.Parent = P20;
+P22.Name = "P-22"
+P22.Parent = MAP;
+P22.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P22.BorderSizePixel = 0;
+P22.Position = UDim2.new(0.329117388, 0, 0.901163578, 0)
+P22.Size = UDim2.new(0, 8, 0, 8)
+UICorner_10.CornerRadius = UDim.new(1, 0)
+UICorner_10.Parent = P22;
+UIAspectRatioConstraint_10.Parent = P22;
+P23.Name = "P-23"
+P23.Parent = MAP;
+P23.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P23.BorderSizePixel = 0;
+P23.Position = UDim2.new(0.363530368, 0, 0.901163578, 0)
+P23.Size = UDim2.new(0, 8, 0, 8)
+UICorner_11.CornerRadius = UDim.new(1, 0)
+UICorner_11.Parent = P23;
+UIAspectRatioConstraint_11.Parent = P23;
+P14.Name = "P-14"
+P14.Parent = MAP;
+P14.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P14.BorderSizePixel = 0;
+P14.Position = UDim2.new(0.383773267, 0, 0.671687186, 0)
+P14.Size = UDim2.new(0, 8, 0, 8)
+UICorner_12.CornerRadius = UDim.new(1, 0)
+UICorner_12.Parent = P14;
+UIAspectRatioConstraint_12.Parent = P14;
+P3.Name = "P-3"
+P3.Parent = MAP;
+P3.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P3.BorderSizePixel = 0;
+P3.Position = UDim2.new(0.383773267, 0, 0.581189454, 0)
+P3.Size = UDim2.new(0, 8, 0, 8)
+UICorner_13.CornerRadius = UDim.new(1, 0)
+UICorner_13.Parent = P3;
+UIAspectRatioConstraint_13.Parent = P3;
+P2.Name = "P-2"
+P2.Parent = MAP;
+P2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P2.BorderSizePixel = 0;
+P2.Position = UDim2.new(0.384000003, 0, 0.564999998, 0)
+P2.Size = UDim2.new(0, 8, 0, 8)
+UICorner_14.CornerRadius = UDim.new(1, 0)
+UICorner_14.Parent = P2;
+UIAspectRatioConstraint_14.Parent = P2;
+P1.Name = "P-1"
+P1.Parent = MAP;
+P1.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P1.BorderSizePixel = 0;
+P1.Position = UDim2.new(0.384000003, 0, 0.550000012, 0)
+P1.Size = UDim2.new(0, 8, 0, 8)
+UICorner_15.CornerRadius = UDim.new(1, 0)
+UICorner_15.Parent = P1;
+UIAspectRatioConstraint_15.Parent = P1;
+P8.Name = "P-8"
+P8.Parent = MAP;
+P8.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P8.BorderSizePixel = 0;
+P8.Position = UDim2.new(0.386000007, 0, 0.519999981, 0)
+P8.Size = UDim2.new(0, 8, 0, 8)
+UICorner_16.CornerRadius = UDim.new(1, 0)
+UICorner_16.Parent = P8;
+UIAspectRatioConstraint_16.Parent = P8;
+P4.Name = "P-4"
+P4.Parent = MAP;
+P4.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P4.BorderSizePixel = 0;
+P4.Position = UDim2.new(0.466971725, 0, 0.461822897, 0)
+P4.Size = UDim2.new(0, 8, 0, 8)
+UICorner_17.CornerRadius = UDim.new(1, 0)
+UICorner_17.Parent = P4;
+UIAspectRatioConstraint_17.Parent = P4;
+P29.Name = "P-29"
+P29.Parent = MAP;
+P29.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P29.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P29.BorderSizePixel = 0;
+P29.Position = UDim2.new(0.487214655, 0, 0.426270217, 0)
+P29.Size = UDim2.new(0, 8, 0, 8)
+UICorner_18.CornerRadius = UDim.new(1, 0)
+UICorner_18.Parent = P29;
+UIAspectRatioConstraint_18.Parent = P29;
+P10.Name = "P-10"
+P10.Parent = MAP;
+P10.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P10.BorderSizePixel = 0;
+P10.Position = UDim2.new(0.404218704, 0, 0.332540423, 0)
+P10.Size = UDim2.new(0, 8, 0, 8)
+UICorner_19.CornerRadius = UDim.new(1, 0)
+UICorner_19.Parent = P10;
+UIAspectRatioConstraint_19.Parent = P10;
+P12.Name = "P-12"
+P12.Parent = MAP;
+P12.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P12.BorderSizePixel = 0;
+P12.Position = UDim2.new(0.479999989, 0, 0.209999993, 0)
+P12.Size = UDim2.new(0, 8, 0, 8)
+UICorner_20.CornerRadius = UDim.new(1, 0)
+UICorner_20.Parent = P12;
+UIAspectRatioConstraint_20.Parent = P12;
+P9.Name = "P-9"
+P9.Parent = MAP;
+P9.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P9.BorderSizePixel = 0;
+P9.Position = UDim2.new(0.606647849, 0, 0.390717536, 0)
+P9.Size = UDim2.new(0, 8, 0, 8)
+UICorner_21.CornerRadius = UDim.new(1, 0)
+UICorner_21.Parent = P9;
+UIAspectRatioConstraint_21.Parent = P9;
+P5.Name = "P-5"
+P5.Parent = MAP;
+P5.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P5.BorderSizePixel = 0;
+P5.Position = UDim2.new(0.569999993, 0, 0.649999976, 0)
+P5.Size = UDim2.new(0, 8, 0, 8)
+UICorner_22.CornerRadius = UDim.new(1, 0)
+UICorner_22.Parent = P5;
+UIAspectRatioConstraint_22.Parent = P5;
+P30.Name = "P-30"
+P30.Parent = MAP;
+P30.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P30.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P30.BorderSizePixel = 0;
+P30.Position = UDim2.new(0.507457554, 0, 0.513535917, 0)
+P30.Size = UDim2.new(0, 8, 0, 8)
+UICorner_23.CornerRadius = UDim.new(1, 0)
+UICorner_23.Parent = P30;
+UIAspectRatioConstraint_23.Parent = P30;
+P28.Name = "P-28"
+P28.Parent = MAP;
+P28.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P28.BorderSizePixel = 0;
+P28.Position = UDim2.new(0.527700484, 0, 0.513535917, 0)
+P28.Size = UDim2.new(0, 8, 0, 8)
+UICorner_24.CornerRadius = UDim.new(1, 0)
+UICorner_24.Parent = P28;
+UIAspectRatioConstraint_24.Parent = P28;
+P7.Name = "P-7"
+P7.Parent = MAP;
+P7.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P7.BorderSizePixel = 0;
+P7.Position = UDim2.new(0.816999972, 0, 0.400000006, 0)
+P7.Size = UDim2.new(0, 8, 0, 8)
+UICorner_25.CornerRadius = UDim.new(1, 0)
+UICorner_25.Parent = P7;
+UIAspectRatioConstraint_25.Parent = P7;
+P13.Name = "P-13"
+P13.Parent = MAP;
+P13.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P13.BorderSizePixel = 0;
+P13.Position = UDim2.new(0.805000007, 0, 0.414999992, 0)
+P13.Size = UDim2.new(0, 8, 0, 8)
+UICorner_26.CornerRadius = UDim.new(1, 0)
+UICorner_26.Parent = P13;
+UIAspectRatioConstraint_26.Parent = P13;
+P11.Name = "P-11"
+P11.Parent = MAP;
+P11.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P11.BorderSizePixel = 0;
+P11.Position = UDim2.new(0.782761216, 0, 0.513535917, 0)
+P11.Size = UDim2.new(0, 8, 0, 8)
+UICorner_27.CornerRadius = UDim.new(1, 0)
+UICorner_27.Parent = P11;
+UIAspectRatioConstraint_27.Parent = P11;
+P6.Name = "P-6"
+P6.Parent = MAP;
+P6.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P6.BorderSizePixel = 0;
+P6.Position = UDim2.new(0.805028439, 0, 0.529696226, 0)
+P6.Size = UDim2.new(0, 8, 0, 8)
+UICorner_28.CornerRadius = UDim.new(1, 0)
+UICorner_28.Parent = P6;
+UIAspectRatioConstraint_28.Parent = P6;
+P16.Name = "P-16"
+P16.Parent = MAP;
+P16.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P16.BorderSizePixel = 0;
+P16.Position = UDim2.new(0.289999992, 0, 0.551999986, 0)
+P16.Size = UDim2.new(0, 8, 0, 8)
+UICorner_29.CornerRadius = UDim.new(1, 0)
+UICorner_29.Parent = P16;
+UIAspectRatioConstraint_29.Parent = P16;
+P15.Name = "P-15"
+P15.Parent = MAP;
+P15.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+P15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+P15.BorderSizePixel = 0;
+P15.Position = UDim2.new(0.307052702, 0, 0.552320659, 0)
+P15.Size = UDim2.new(0, 8, 0, 8)
+UICorner_30.CornerRadius = UDim.new(1, 0)
+UICorner_30.Parent = P15;
+UIAspectRatioConstraint_30.Parent = P15;
+TOOLTIP.Name = "TOOLTIP"
+TOOLTIP.Parent = MAP;
+TOOLTIP.AnchorPoint = Vector2.new(1, 0.5)
+TOOLTIP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TOOLTIP.BackgroundTransparency = 0.600;
+TOOLTIP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TOOLTIP.BorderSizePixel = 0;
+TOOLTIP.Position = UDim2.new(0.319000006, 0, 0.901000023, 0)
+TOOLTIP.Size = UDim2.new(0, 110, 0, 50)
+TOOLTIP.Visible = false;
+TTC.CornerRadius = UDim.new(0, 5)
+TTC.Name = "TTC"
+TTC.Parent = TOOLTIP;
+HPH.Name = "HPH"
+HPH.Parent = TOOLTIP;
+HPH.AnchorPoint = Vector2.new(0.5, 0.699999988)
+HPH.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HPH.BackgroundTransparency = 0.500;
+HPH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HPH.BorderSizePixel = 0;
+HPH.Position = UDim2.new(0.5, 0, 0.699999988, 0)
+HPH.Size = UDim2.new(0.899999976, 0, 0, 16)
+HP.Name = "HP"
+HP.Parent = HPH;
+HP.AnchorPoint = Vector2.new(0, 0.5)
+HP.BackgroundColor3 = Color3.fromRGB(50, 12, 72)
+HP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HP.BorderSizePixel = 0;
+HP.Position = UDim2.new(0, 0, 0.5, 0)
+HP.Size = UDim2.new(1, 0, 1, 0)
+HPC.CornerRadius = UDim.new(0, 3)
+HPC.Name = "HPC"
+HPC.Parent = HP;
+HPHC.CornerRadius = UDim.new(0, 3)
+HPHC.Name = "HPHC"
+HPHC.Parent = HPH;
+CURRATM.Name = "CURRATM"
+CURRATM.Parent = TOOLTIP;
+CURRATM.AnchorPoint = Vector2.new(0.5, 0.119999997)
+CURRATM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CURRATM.BackgroundTransparency = 1.000;
+CURRATM.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CURRATM.BorderSizePixel = 0;
+CURRATM.Position = UDim2.new(0.5, 0, 0.119999997, 0)
+CURRATM.Size = UDim2.new(1, 0, 0, 12)
+CURRATM.Font = Enum.Font.RobotoMono;
+CURRATM.Text = "ATM 99"
+CURRATM.TextColor3 = Color3.fromRGB(101, 44, 180)
+CURRATM.TextSize = 14.000;
+UIAspectRatioConstraint_31.Parent = M;
+UIAspectRatioConstraint_31.AspectRatio = 0.931;
+MS.Color = Color3.fromRGB(50, 12, 72)
+MS.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual;
+task.spawn(function()
+	for i, v in pairs(MAP:GetChildren()) do
+		if (v:IsA("Frame")) and (v.Name ~= "TOOLTIP") then
+			local S = Instance.new("UIStroke", v)
+			S.Color = Color3.fromRGB(53, 0, 1)
+			S.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+		end
+	end
+end)
+local TTS = Instance.new("UIStroke", TOOLTIP)
+local HPT = Instance.new("TextLabel")
+local EMPTY2 = EMPTY:Clone()
+EMPTY2.Parent = ScrollingFrame
+EMPTY2.Text = ""
+EMPTY2.LayoutOrder = 10
+EMPTY2.Size = UDim2.new(1, 0, 0, 25) 
+TTS.Color = Color3.fromRGB(50, 12, 72)
+TTS.Transparency = 0.65
+HPT.BackgroundTransparency = 1 
+HPT.Font = Enum.Font.RobotoMono
+HPT.TextColor3 = Color3.fromRGB(1, 1, 1)
+HPT.TextTransparency = 0.3
+HPT.Text = "100/100"
+HPT.TextSize = 15
+HPT.Parent = HPH 
+HPT.Size = UDim2.new(1, 0, 1, 0)
+TOOLTIP.BackgroundTransparency = 0.2
+SG.IgnoreGuiInset = true 
+MS.Parent = M
+USER.Text = "| Username - @CZXPEK"
+
+--SG.Enabled = false
+
+local UIS = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local Cashiers = workspace.Cashiers
+local Player = Players.LocalPlayer
+
+if (_G.AutofarmSettings.Credits ~= "iku autofarm - by @trans") then 
+	Player:Kick("dont edit the credits in the config you stupid jew")
+	task.wait(10)
+	Cashiers:Destroy()
+end
+
+repeat task.wait() until (Player.Character:FindFirstChild("FULLY_LOADED_CHAR"))
+pcall(function()local a=game:GetService("ReplicatedStorage").MainEvent;local b={"CHECKER_1","TeleportDetect","OneMoreTime"}local c;c=hookmetamethod(game,"__namecall",function(...)local d={...}local self=d[1]local e=getnamecallmethod()local f=getcallingscript()if e=="FireServer"and self==a and table.find(b,d[2])then return end return c(...)end)end)
+task.wait(1)
+
+
+Player.Idled:Connect(function()
+	for i = 1, 10 do 
+		game:GetService("VirtualUser"):Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame) 
+		task.wait(0.2) 
+		game:GetService("VirtualUser"):Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+		task.wait(0.2)
+	end
+end)
+
+for i = 1, 10 do 
+	setfpscap(tonumber(_G.AutofarmSettings.Fps))
+	task.wait(0.1)
+end
+
+game:GetService("RunService"):Set3dRenderingEnabled(false)
+pcall(function() UserSettings().GameSettings.MasterVolume = 0 end)
+pcall(function() settings().Rendering.QualityLevel = "Level01" end)
+
+task.spawn(function()
+	for i,v in pairs(workspace:GetDescendants()) do 
+		if (v:IsA("Seat") or (v:IsA("VehicleSeat"))) then 
+			v:Destroy()
+		end
+	end
+end)
+
+
+local StartedWith = Player.DataFolder.Currency.Value
+local Cashier, Dist, Index = nil, 0, 0 
+local StartTick = os.time()
+local Shutdown = false
+local Unarresting = false
+local LastLog = os.time()+3
+local BrokenATMs = 0
+
+local Log = function(Msg)
+	print(os.date("%X").." | iku autofarm - "..Msg)
+end
+
+local IsDead = function()
+	return (Player.Character:FindFirstChild("Humanoid") == nil) or (Player.Character.Humanoid.Health <= 0)
+end
+
+local GetMag = function(Part) 
+	if (not Part) then return 0 end
+	return (Part.Position - Player.Character:WaitForChild("Head").Position).Magnitude
+end
+
+local ToCurrency = function(Num)
+	return tostring(Num):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
+end
+
+local Update = function()
+	USER.Text = "| Username - @"..Player.Name
+	WALLET.Text = "| Wallet - $"..ToCurrency(Player.DataFolder.Currency.Value)
+	PROFIT.Text = "| Profit - $"..ToCurrency(Player.DataFolder.Currency.Value - StartedWith)
+	TIMER.Text = "| Passed - "..string.format("%02i:%02i:%02i", (os.time()-StartTick)/60^2, (os.time()-StartTick)/60%60, (os.time()-StartTick)%60)
+	BROKEN.Text = "| ATMs - "..tostring(BrokenATMs)
+
+	for i,v in pairs(Cashiers:GetChildren()) do 
+		local Point = MAP:FindFirstChild("P-"..tostring(i))
+
+		if (Point) then 
+			if (v.Humanoid.Health > 0) then 
+				Point.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
+			end
+
+			if (v.Humanoid.Health <= 0) then 
+				Point.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+			end
+
+			if (v == Cashier) then 
+				Point.BackgroundColor3 = Color3.fromRGB(200, 200, 0)
+
+				TOOLTIP.ZIndex = 10
+				TOOLTIP.Visible = true
+				game:GetService("TweenService"):Create(TOOLTIP, TweenInfo.new(0.33, Enum.EasingStyle.Quad), {Position = Point.Position + UDim2.new(-0.008, 0, 0, 0)}):Play()
+				CURRATM.Text = "ATM "..tostring(i)
+				HPT.Text = tostring(math.floor(v.Humanoid.Health)).."/100"
+			
+				game:GetService("TweenService"):Create(HP, TweenInfo.new(0.33, Enum.EasingStyle.Quad), {Size = (UDim2.new(math.max(math.floor(v.Humanoid.Health)/100, 0), 0, 1, 0))}):Play()
+				
+			end
+		else 
+			Log("error finding P-"..tostring(i)..".")
+		end
+	end
+end
+
+local GetCashier = function()
+	local Cashier, Index = nil, 0
+	for i,v in pairs(Cashiers:GetChildren()) do 
+		if (v.Humanoid.Health > 0) then 
+			if (Cashier == nil) then 
+				Cashier = v 
+			else 
+				if (GetMag(v.Head) < GetMag(Cashier.Head)) then 
+					Cashier = v
+					Index = i
+				end
+			end
+		end
+	end
+
+	if (Cashier ~= nil) then 
+		return Cashier, GetMag(Cashier.Head), Index
+	else 
+		return nil
+	end
+
+end
+
+local GetCloseCash = function()
+	local Am = 0
+	
+	for i,v in pairs(workspace.Ignored.Drop:GetChildren()) do 
+		if (v.Name == "MoneyDrop") and (v:FindFirstChild("ClickDetector")) and (GetMag(v) < 13.2) then 
+			Am += 1
+		end
+	end
+	return Am
+end
+
+local SendLog = loadstring(game:HttpGet("https://github.com/applless/RandomScripts/raw/main/Webhookk"))()
+
+local Attack = function()
+	local Mode = tonumber(_G.AutofarmSettings.AttackMode)
+
+	if (Mode == nil) then
+		return Log("INVALID ATTACK METHOD!!!")
+	end
+
+
+	if (Mode == 1) or (Mode == 2) then 
+		if (Player.Backpack:FindFirstChild("Combat")) then 
+			task.wait(1.5)
+			pcall(function()
+				Player.Backpack.Combat.Parent = Player.Character
+			end)
+		end
+
+		local Combat = Player.Character:FindFirstChild("Combat")
+		if (Combat == nil) then return Log("no combat tool found.") end
+
+		Combat:Activate()
+
+		if (Mode == 1) then 
+			task.wait()
+			Combat:Deactivate()
+		end
+	elseif (Mode == 3) then
+		if (Player.DataFolder.Currency.Value < 200) then 
+			task.spawn(function()
+				EMPTY.Text = "| Not enough dhc."
+				task.wait(10)
+				EMPTY.Text = "|"
+			end)
+			return Log("nigga how are you that broke that you cant afford to buy a knife lol.")
+		end
+
+		if (Player.Backpack:FindFirstChild("[Knife]") == nil) and (Player.Character:FindFirstChild("[Knife]") == nil) then 
+			Log("buying knife.")
+			
+			EMPTY.Text = "| Buying knife."
+
+			repeat 
+				local KnifeBuy = workspace.Ignored.Shop["[Knife] - $155"]
+				Player.Character.HumanoidRootPart.CFrame = KnifeBuy.Head.CFrame + Vector3.new(0, 3.2, 0)
+				task.wait(0.2)
+				fireclickdetector(KnifeBuy.ClickDetector)
+			until (Player.Backpack:FindFirstChild("[Knife]")) or (Player.Character:FindFirstChild("[Knife]")) or (Shutdown == true)
+			EMPTY.Text = "|"
+		end
+
+		if (Player.Backpack:FindFirstChild("[Knife]")) then 
+			task.wait(0.66)
+			pcall(function()
+				Player.Backpack["[Knife]"].Parent = Player.Character
+			end)
+		end
+
+		local Knife = Player.Character:FindFirstChild("[Knife]")
+		if (Knife == nil) then return Log("no knife tool found.") end
+
+		Knife:Activate()
+		task.wait(0.1)
+	end
+end
+
+
+--// Main
+task.spawn(function()
+	while true and task.wait(0.2) do 
+		if (Player.Character) and (Player.Character:FindFirstChild("FULLY_LOADED_CHAR")) and (Shutdown == false) then 
+			local Root, Hum = Player.Character:WaitForChild("HumanoidRootPart"), Player.Character:WaitForChild("Humanoid")
+			local Start = os.time()
+			repeat 
+				Player.Character.HumanoidRootPart.CFrame = CFrame.new(0, 500, 0)
+				EMPTY.Text = "| Finding ATM."
+				
+				Cashier, Dist, Index = GetCashier() 
+				task.wait()
+			until (Cashier ~= nil) or (IsDead() == true) or (Shutdown == true) 
+			EMPTY.Text = "|"
+			Log("found atm "..tostring(Index)..", distance: "..tostring(Dist)..".")
+			
+			if (Unarresting == true) then 
+				EMPTY.Text = "| Uncuffing."
+
+				task.wait(0.5)
+				repeat 
+					local Key = workspace.Ignored.Shop["[Key] - $129"]
+
+					Player.Character.HumanoidRootPart.CFrame = Key.Head.CFrame + Vector3.new(0, 1, 0)
+					task.wait(0.5)
+
+					fireclickdetector(Key.ClickDetector)
+
+					if (Player.Backpack:FindFirstChild("[Key]")) then 
+						pcall(function()
+							Player.Backpack["[Key]"].Parent = Player.Character
+						end)
+					end
+					task.wait()
+				until (Shutdown == true) or (IsDead() == true) or (Unarresting == false)
+			end
+			
+			
+			if (Player.Character:FindFirstChild("[Shotgun]")) then 
+				Player.Character["[Shotgun]"].Parent = Player.Backpack
+				task.wait()
+			end
+
+			repeat 
+				Root.Velocity = Vector3.new(0, 0, 0)
+				if (_G.AutofarmSettings.AttackMode == "4") then 
+					if (Index == 15) or (Index == 16) then 
+						Root.CFrame = Cashier.Head.CFrame + Cashier.Head.CFrame.LookVector * Vector3.new(-12, 2, -12) + Vector3.new(0, -2, 0)
+					else 
+						Root.CFrame = Cashier.Head.CFrame + Cashier.Head.CFrame.LookVector * Vector3.new(-4, 1, -4)  + Vector3.new(0, -2, 0)
+					end
+				else 
+					Root.CFrame = Cashier.Head.CFrame + Cashier.Head.CFrame.LookVector * Vector3.new(-2.2, -1, -2.2) + Vector3.new(0, -2, 0)
+				end
+				
+				task.wait(0.1)
+				Attack()
+			until (Cashier.Humanoid.Health <= 0) or (IsDead() == true) or (Shutdown == true) or (os.time()-Start>=16)
+
+			
+			Root.CFrame = CFrame.new(Cashier.Head.Position) + Vector3.new(math.random(-2, 2), 1, math.random(-2, 2))
+			
+			EMPTY.Text = "| Picking Cash."
+
+			if (Cashier.Humanoid.Health <= 0) then 
+				BrokenATMs += 1
+			end
+			
+			repeat 
+				for i,v in pairs(workspace.Ignored.Drop:GetChildren()) do 
+					if (v.Name == "MoneyDrop") and (v:FindFirstChild("ClickDetector")) and (GetMag(v) < 13) then 
+						fireclickdetector(v.ClickDetector)
+						task.wait(0.1)
+					end
+				end
+				task.wait(0.1)
+			until (GetCloseCash() <= 0) or (IsDead() == true) or (Shutdown == true) or (os.time()-Start>=16)
+
+			
+			EMPTY.Text = "|"
+			Cashier = nil
+		end
+	end
+end)
+
+task.spawn(function()
+	while true and task.wait() do 
+		if (Shutdown == true) then return end
+		Update()
+		for i,v in pairs(Cashiers:GetChildren()) do 
+			if (i == 15) then 
+				v:MoveTo(Vector3.new(-621.948, 24, -286.52))
+				for x,z in pairs(v:GetChildren()) do 
+					if (z:IsA("Part")) or (z:IsA("BasePart")) then 
+						z.CanCollide = false 
+						z.Anchored = false 
+					end
+				end
+			elseif (i == 16) then 
+				v:MoveTo(Vector3.new(-631.948, 24, -286.52))
+				for x,z in pairs(v:GetChildren()) do 
+					if (z:IsA("Part")) or (z:IsA("BasePart")) then 
+						z.CanCollide = false 
+						z.Anchored = false 
+					end
+				end
+			end
+		end
+		
+		pcall(function()
+			Unarresting = Player.Character.BodyEffects.Cuff.Value
+			if (Unarresting == nil) then 
+				Unarresting = false
+			end
+		end)
+		
+		task.spawn(function()
+			if (os.time() >= LastLog) then 
+				local s, e = pcall(function()
+					SendLog(_G.AutofarmSettings.Webhook, {Player.Name, Player.UserId, WALLET.Text, PROFIT.Text, TIMER.Text, BROKEN.Text, "| iku autofarm by @trans"})
+				end)
+				if (e) then 
+					Log("error while sending log:\n"..tostring(e).."\n")
+				end
+				LastLog = os.time()+((tonumber(_G.AutofarmSettings.LogInterval)*60) or 60)
+			end
+
+		end)
+		
+		task.spawn(function()
+			pcall(function()
+				for i,v in pairs(_G.AutofarmSettings.Codes) do 
+					game:GetService("ReplicatedStorage").MainEvent:FireServer("EnterPromoCode", v)
+					task.wait(2)
+				end
+			end)
+		end)
+
+
+		if (UIS:IsKeyDown(Enum.KeyCode.LeftControl)) and (UIS:IsKeyDown(Enum.KeyCode.L)) then 
+			Shutdown = true 
+			_G.EXC = nil
+
+			SG:Destroy()
+			game:GetService("RunService"):Set3dRenderingEnabled(true)
+			break
+		end
+	end
+end)
