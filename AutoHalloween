@@ -1,0 +1,47 @@
+if (not game:IsLoaded()) then 
+	game.Loaded:Wait()
+	task.wait(2)
+end
+
+pcall(function()local a=game:GetService("ReplicatedStorage").MainEvent;local b={"CHECKER_1","TeleportDetect","OneMoreTime"}local c;c=hookmetamethod(game,"__namecall",function(...)local d={...}local self=d[1]local e=getnamecallmethod()local f=getcallingscript()if e=="FireServer"and self==a and table.find(b,d[2])then return end return c(...)end)end)
+
+local Player = game:GetService("Players").LocalPlayer
+local Enabled = true
+
+task.spawn(function()
+	while true and task.wait() do 
+		if (Enabled == true) and (Player.Character) and (Player.Character:FindFirstChild("HumanoidRootPart")) then 
+			local Root = Player.Character.HumanoidRootPart
+			
+			for i,v in pairs(workspace.Ignored:GetChildren()) do 
+				if (v.Name == "Doorbell") then 
+					Root.CFrame = v.Main.CFrame + v.Main.CFrame.LookVector * Vector3.new(3, 0, 3)
+					if (Enabled == false) then 
+						return nil
+					end
+					if (Player.Backpack:FindFirstChild("HalloweenBucket")) then 
+						Player.Backpack.HalloweenBucket.Parent = Player.Character
+					end
+					task.wait(0.5)
+					fireclickdetector(v.ClickDetector)
+					task.wait(2.5)
+				end
+			end
+		end
+	end
+end)
+
+Player.Chatted:Connect(function(Str) 
+	if (Str == "/disable") then 
+		Enabled = false
+	end
+end)
+
+Player.Idled:Connect(function()
+	for i = 1, 10 do 
+		game:GetService("VirtualUser"):Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame) 
+		task.wait(0.2) 
+		game:GetService("VirtualUser"):Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+		task.wait(0.2)
+	end
+end)
