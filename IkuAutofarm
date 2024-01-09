@@ -942,6 +942,18 @@ local Attack = function()
 	end
 end
 
+local AntiSit = function(Char)
+	task.wait(1)	
+	local Hum = Char:WaitForChild("Humanoid")
+	Hum.Seated:Connect(function()
+		warn("SITTING")
+		Hum.Sit = false
+		Hum:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+		task.wait(0.3)
+		Hum.Jump = true
+		--// theres prob a better method to do this but im lazy lol
+	end)
+end
 
 --// Main
 task.spawn(function()
@@ -1022,6 +1034,12 @@ task.spawn(function()
 			Cashier = nil
 		end
 	end
+end)
+
+Player.CharacterAdded:Connect(AntiSit)
+task.spawn(function()
+	task.wait(3)
+	AntiSit(Player.Character)
 end)
 
 task.spawn(function()
