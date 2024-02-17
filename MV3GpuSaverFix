@@ -1,0 +1,228 @@
+--// made by @trans
+if (game:IsLoaded() == false) then 
+	game.Loaded:Wait()
+end
+task.wait(1)
+
+local Player = game:GetService("Players").LocalPlayer
+local UserInput = game:GetService("UserInputService")
+local Core = game:GetService("CoreGui")
+local Run = game:GetService("RunService")
+local Conn = nil
+
+local Converted = {
+	["_Saver"] = Instance.new("ScreenGui");
+	["_BackFrame"] = Instance.new("Frame");
+	["_BackGradient"] = Instance.new("UIGradient");
+	["_MainFrame"] = Instance.new("Frame");
+	["_MainCorner"] = Instance.new("UICorner");
+	["_MainStroke"] = Instance.new("UIStroke");
+	["_Title"] = Instance.new("TextLabel");
+	["_UIAspectRatioConstraint"] = Instance.new("UIAspectRatioConstraint");
+	["_Pollen"] = Instance.new("TextLabel");
+	["_UIPadding"] = Instance.new("UIPadding");
+	["_UICorner"] = Instance.new("UICorner");
+	["_UIStroke"] = Instance.new("UIStroke");
+	["_UIAspectRatioConstraint1"] = Instance.new("UIAspectRatioConstraint");
+	["_Honey"] = Instance.new("TextLabel");
+	["_UIPadding1"] = Instance.new("UIPadding");
+	["_UICorner1"] = Instance.new("UICorner");
+	["_UIStroke1"] = Instance.new("UIStroke");
+	["_UIAspectRatioConstraint2"] = Instance.new("UIAspectRatioConstraint");
+	["_TextButton"] = Instance.new("TextButton");
+	["_UIStroke2"] = Instance.new("UIStroke");
+	["_UICorner2"] = Instance.new("UICorner");
+	["_UIAspectRatioConstraint3"] = Instance.new("UIAspectRatioConstraint");
+}
+
+Converted["_Saver"].IgnoreGuiInset = true
+Converted["_Saver"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_Saver"].Name = "Saver"
+Converted["_Saver"].Parent = game:GetService("CoreGui")
+Converted["_Saver"].Enabled = false
+
+Converted["_BackFrame"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_BackFrame"].BackgroundColor3 = Color3.fromRGB(33.00000183284283, 33.00000183284283, 33.00000183284283)
+Converted["_BackFrame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_BackFrame"].BorderSizePixel = 0
+Converted["_BackFrame"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_BackFrame"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_BackFrame"].Name = "BackFrame"
+Converted["_BackFrame"].Parent = Converted["_Saver"]
+
+Converted["_BackGradient"].Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(245.00000059604645, 244.0000006556511, 244.0000006556511)),
+	ColorSequenceKeypoint.new(0.15224914252758026, Color3.fromRGB(235.0000011920929, 234.00000125169754, 234.00000125169754)),
+	ColorSequenceKeypoint.new(0.3581314980983734, Color3.fromRGB(225.00000178813934, 224.000001847744, 224.000001847744)),
+	ColorSequenceKeypoint.new(0.5657439827919006, Color3.fromRGB(215.0000023841858, 214.00000244379044, 214.00000244379044)),
+	ColorSequenceKeypoint.new(0.7525951862335205, Color3.fromRGB(205.00000298023224, 205.00000298023224, 205.00000298023224)),
+	ColorSequenceKeypoint.new(0.8927335739135742, Color3.fromRGB(195.0000035762787, 195.0000035762787, 195.0000035762787)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(185.00000417232513, 185.00000417232513, 185.00000417232513))
+}
+Converted["_BackGradient"].Rotation = 90
+Converted["_BackGradient"].Name = "BackGradient"
+Converted["_BackGradient"].Parent = Converted["_BackFrame"]
+
+Converted["_MainFrame"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_MainFrame"].BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867)
+Converted["_MainFrame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_MainFrame"].BorderSizePixel = 0
+Converted["_MainFrame"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_MainFrame"].Size = UDim2.new(0, 400, 0, 230)
+Converted["_MainFrame"].Name = "MainFrame"
+Converted["_MainFrame"].Parent = Converted["_BackFrame"]
+
+Converted["_MainCorner"].CornerRadius = UDim.new(0, 6)
+Converted["_MainCorner"].Name = "MainCorner"
+Converted["_MainCorner"].Parent = Converted["_MainFrame"]
+
+Converted["_MainStroke"].Color = Color3.fromRGB(122.00000032782555, 122.00000032782555, 122.00000032782555)
+Converted["_MainStroke"].Name = "MainStroke"
+Converted["_MainStroke"].Parent = Converted["_MainFrame"]
+
+Converted["_Title"].Font = Enum.Font.GothamBold
+Converted["_Title"].Text = "MacroV3"
+Converted["_Title"].TextColor3 = Color3.fromRGB(200.00000327825546, 200.00000327825546, 200.00000327825546)
+Converted["_Title"].TextSize = 30
+Converted["_Title"].AnchorPoint = Vector2.new(0.5, 0.04200000074505806)
+Converted["_Title"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Title"].BackgroundTransparency = 1
+Converted["_Title"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Title"].BorderSizePixel = 0
+Converted["_Title"].Position = UDim2.new(0.5, 0, 0.0420000007, 0)
+Converted["_Title"].Size = UDim2.new(0, 200, 0, 50)
+Converted["_Title"].Name = "Title"
+Converted["_Title"].Parent = Converted["_MainFrame"]
+
+Converted["_UIAspectRatioConstraint"].Parent = Converted["_Title"]
+
+Converted["_Pollen"].Font = Enum.Font.Gotham
+Converted["_Pollen"].Text = "Pollen : 999,999,999"
+Converted["_Pollen"].TextColor3 = Color3.fromRGB(200.00000327825546, 200.00000327825546, 200.00000327825546)
+Converted["_Pollen"].TextSize = 15
+Converted["_Pollen"].TextTransparency = 0.20000000298023224
+Converted["_Pollen"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_Pollen"].AnchorPoint = Vector2.new(0.5, 0.30000001192092896)
+Converted["_Pollen"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Pollen"].BackgroundTransparency = 0.800000011920929
+Converted["_Pollen"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Pollen"].BorderSizePixel = 0
+Converted["_Pollen"].Position = UDim2.new(0.5, 0, 0.300000012, 0)
+Converted["_Pollen"].Size = UDim2.new(0.649999976, 0, 0.119999997, 0)
+Converted["_Pollen"].Name = "Pollen"
+Converted["_Pollen"].Parent = Converted["_MainFrame"]
+
+Converted["_UIPadding"].PaddingLeft = UDim.new(0, 8)
+Converted["_UIPadding"].Parent = Converted["_Pollen"]
+
+Converted["_UICorner"].CornerRadius = UDim.new(0, 6)
+Converted["_UICorner"].Parent = Converted["_Pollen"]
+
+Converted["_UIStroke"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke"].Color = Color3.fromRGB(122.00000032782555, 122.00000032782555, 122.00000032782555)
+Converted["_UIStroke"].Parent = Converted["_Pollen"]
+
+Converted["_UIAspectRatioConstraint1"].AspectRatio = 9.300000190734863
+Converted["_UIAspectRatioConstraint1"].Parent = Converted["_Pollen"]
+
+Converted["_Honey"].Font = Enum.Font.Gotham
+Converted["_Honey"].Text = "Honey : 999,999,999"
+Converted["_Honey"].TextColor3 = Color3.fromRGB(200.00000327825546, 200.00000327825546, 200.00000327825546)
+Converted["_Honey"].TextSize = 15
+Converted["_Honey"].TextTransparency = 0.20000000298023224
+Converted["_Honey"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_Honey"].AnchorPoint = Vector2.new(0.5, 0.47999998927116394)
+Converted["_Honey"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Honey"].BackgroundTransparency = 0.800000011920929
+Converted["_Honey"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Honey"].BorderSizePixel = 0
+Converted["_Honey"].Position = UDim2.new(0.5, 0, 0.479999989, 0)
+Converted["_Honey"].Size = UDim2.new(0.649999976, 0, 0.119999997, 0)
+Converted["_Honey"].Name = "Honey"
+Converted["_Honey"].Parent = Converted["_MainFrame"]
+
+Converted["_UIPadding1"].PaddingLeft = UDim.new(0, 8)
+Converted["_UIPadding1"].Parent = Converted["_Honey"]
+
+Converted["_UICorner1"].CornerRadius = UDim.new(0, 6)
+Converted["_UICorner1"].Parent = Converted["_Honey"]
+
+Converted["_UIStroke1"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke1"].Color = Color3.fromRGB(122.00000032782555, 122.00000032782555, 122.00000032782555)
+Converted["_UIStroke1"].Parent = Converted["_Honey"]
+
+Converted["_UIAspectRatioConstraint2"].AspectRatio = 9.300000190734863
+Converted["_UIAspectRatioConstraint2"].Parent = Converted["_Honey"]
+
+Converted["_TextButton"].Font = Enum.Font.Gotham
+Converted["_TextButton"].Text = "Disable\nPress ';' if doesn't work"
+Converted["_TextButton"].TextColor3 = Color3.fromRGB(200.00000327825546, 200.00000327825546, 200.00000327825546)
+Converted["_TextButton"].TextSize = 14
+Converted["_TextButton"].TextTransparency = 0.20000000298023224
+Converted["_TextButton"].AnchorPoint = Vector2.new(0.5, 0.760000011920929)
+Converted["_TextButton"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextButton"].BackgroundTransparency = 0.800000011920929
+Converted["_TextButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextButton"].BorderSizePixel = 0
+Converted["_TextButton"].Position = UDim2.new(0.5, 0, 0.760000012, 0)
+Converted["_TextButton"].Size = UDim2.new(0, 160, 0, 40)
+Converted["_TextButton"].Parent = Converted["_MainFrame"]
+
+Converted["_UIStroke2"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke2"].Color = Color3.fromRGB(122.00000032782555, 122.00000032782555, 122.00000032782555)
+Converted["_UIStroke2"].Parent = Converted["_TextButton"]
+
+Converted["_UICorner2"].CornerRadius = UDim.new(0, 6)
+Converted["_UICorner2"].Parent = Converted["_TextButton"]
+
+Converted["_UIAspectRatioConstraint3"].AspectRatio = 4
+Converted["_UIAspectRatioConstraint3"].Parent = Converted["_TextButton"]
+
+if (Core:FindFirstChild("MV3") == nil) then 
+	repeat task.wait(1/2) warn("waiting for mv3") until (Core:FindFirstChild("MV3") ~= nil)
+	task.wait(5)
+end
+
+local Containers = game:GetService("CoreGui").MV3.MainFrame._.Containers 
+local Button = nil
+local Toggled = false
+
+local Abbreviate = loadstring(game:HttpGet("https://github.com/applless/RandomScripts/raw/main/Abbreviation"))()
+	
+for i,v in pairs(Containers:GetChildren()) do
+	if (i == 8) then 
+		Button = v.Container.Toggle.ToggleButton 
+	end
+end
+
+Conn = Button.MouseButton1Click:Connect(function()
+	Run:Set3dRenderingEnabled(false)
+	Converted["_Saver"].Enabled = true 
+	
+	task.spawn(function()
+		while (Converted["_Saver"].Enabled == true) and task.wait(1/2) do 
+			Converted["_Pollen"].Text = "Pollen : "..Abbreviate(Player.CoreStats.Pollen.Value).." / "..Abbreviate(Player.CoreStats.Capacity.Value)
+			Converted["_Honey"].Text = "Honey : "..Abbreviate(Player.CoreStats.Honey.Value)
+		end
+	end)
+	
+	Converted["_TextButton"].Activated:Connect(function()
+		Converted["_Saver"].Enabled = false 
+		Run:Set3dRenderingEnabled(true)
+	end)
+	
+	UserInput.InputBegan:Connect(function(Input, Processed)
+		if (Input.KeyCode == Enum.KeyCode.Semicolon) and (not Processed) then 
+			Converted["_Saver"].Enabled = false 
+			Run:Set3dRenderingEnabled(true)
+		end
+	end)
+end)
+
+
+Player.Chatted:Connect(function(Msg)
+	if (Msg == "/dis") then 
+		Conn:Disconnect()
+		Converted["_Saver"]:Destroy()
+	end
+end)
