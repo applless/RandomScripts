@@ -1,0 +1,295 @@
+--// i found this shit on devforum
+
+local Abbreviate = function(value)
+	local abbreviations = {
+		"K", -- 4 digits 
+		"M", -- 7 eigits
+		"B", -- 10 digits
+		"T", -- 13 digits
+		"Q", -- 16 digits
+		"Qi", -- 19 digits
+		"S", -- 22 digits
+		"Sx", -- 25 digits
+		"Sp", -- 25 digits
+		"Oc", -- 28 digits
+		"N", -- 31 digits
+		"De", -- 34 digits
+		"Un", -- 37 digits
+		"Tr", -- 40 digits
+	}
+	local newstring = ""
+	if value >= 1e+3 and value < 1e+6 then
+		local args = string.split(tostring(value / 1e+3), "")
+		local isperiod = false
+		local ready = false
+		local nextnum
+		for i,v in pairs(args) do
+			if not ready then
+				if isperiod then
+					newstring ..= v
+					if not nextnum then
+						nextnum = true
+					else
+						ready = true
+					end
+				else
+					newstring ..= v
+					if v == "." then
+						isperiod = true
+					end
+				end
+			end
+		end
+		newstring ..= abbreviations[1]
+	end
+	if value >= 1e+6 and value < 1e+9 then
+		local args = string.split(tostring(value / 1e+6), "")
+		local isperiod = false
+		local ready = false
+		local nextnum
+		for i,v in pairs(args) do
+			if not ready then
+				if isperiod then
+					newstring ..= v
+					if not nextnum then
+						nextnum = true
+					else
+						ready = true
+					end
+				else
+					newstring ..= v
+					if v == "." then
+						isperiod = true
+					end
+				end
+			end
+		end
+		newstring ..= abbreviations[2]
+	end
+	if value >= 1e+9 and value < 1e+12 then
+		local args = string.split(tostring(value / 1e+9), "")
+		local isperiod = false
+		local ready = false
+		local nextnum
+		for i,v in pairs(args) do
+			if not ready then
+				if isperiod then
+					newstring ..= v
+					if not nextnum then
+						nextnum = true
+					else
+						ready = true
+					end
+				else
+					newstring ..= v
+					if v == "." then
+						isperiod = true
+					end
+				end
+			end
+		end
+		newstring ..= abbreviations[3]
+	end
+	if value >= 1e+12 and value < 1e+15 then
+		local args = string.split(tostring(value / 1e+12), "")
+		local isperiod = false
+		local ready = false
+		local isperiod = false
+		local ready = false
+		local nextnum
+		for i,v in pairs(args) do
+			if not ready then
+				if isperiod then
+					newstring ..= v
+					if not nextnum then
+						nextnum = true
+					else
+						ready = true
+					end
+				else
+					newstring ..= v
+					if v == "." then
+						isperiod = true
+					end
+				end
+			end
+		end
+		newstring ..= abbreviations[4]
+	end
+	if value >= 1e+15 and value < 1e+18 then
+		local args = string.split(tostring(value / 1e+15), "")
+		local isperiod = false
+		local ready = false
+		local nextnum
+		for i,v in pairs(args) do
+			if not ready then
+				if isperiod then
+					newstring ..= v
+					if not nextnum then
+						nextnum = true
+					else
+						ready = true
+					end
+				else
+					newstring ..= v
+					if v == "." then
+						isperiod = true
+					end
+				end
+			end
+		end
+		newstring ..= abbreviations[5]
+	end
+	if value >= 1e+18 and value < 1e+21 then
+		local args = string.split(tostring(value / 1e+18), "")
+		local isperiod = false
+		local ready = false
+		local nextnum
+		for i,v in pairs(args) do
+			if not ready then
+				if isperiod then
+					newstring ..= v
+					if not nextnum then
+						nextnum = true
+					else
+						ready = true
+					end
+				else
+					newstring ..= v
+					if v == "." then
+						isperiod = true
+					end
+				end
+			end
+		end
+		newstring ..= abbreviations[6]
+	end
+	if value >= 1e+21 and value < 1e+24 then
+		local args = string.split(tostring(value / 1e+21), "")
+		local isperiod = false
+		local ready = false
+		local nextnum
+		for i,v in pairs(args) do
+			if not ready then
+				if isperiod then
+					newstring ..= v
+					if not nextnum then
+						nextnum = true
+					else
+						ready = true
+					end
+				else
+					newstring ..= v
+					if v == "." then
+						isperiod = true
+					end
+				end
+			end
+		end
+		newstring ..= abbreviations[7]
+	end
+	if value >= 1e+24 and value < 1e+27 then
+		local args = string.split(tostring(value / 1e+24), "")
+		local isperiod = false
+		local ready = false
+		local isperiod = false
+		local ready = false
+		local nextnum
+		for i,v in pairs(args) do
+			if not ready then
+				if isperiod then
+					newstring ..= v
+					if not nextnum then
+						nextnum = true
+					else
+						ready = true
+					end
+				else
+					newstring ..= v
+					if v == "." then
+						isperiod = true
+					end
+				end
+			end
+		end
+		newstring ..= abbreviations[8]
+	end
+	if value >= 1e+27 and value < 1e+30 then
+		local args = string.split(tostring(value / 1e+27), "")
+		local isperiod = false
+		local ready = false
+		local nextnum
+		for i,v in pairs(args) do
+			if not ready then
+				if isperiod then
+					newstring ..= v
+					if not nextnum then
+						nextnum = true
+					else
+						ready = true
+					end
+				else
+					newstring ..= v
+					if v == "." then
+						isperiod = true
+					end
+				end
+			end
+		end
+		newstring ..= abbreviations[9]
+	end
+	if value >= 1e+30 and value < 1e+33 then
+		local args = string.split(tostring(value / 1e+30), "")
+		local isperiod = false
+		local ready = false
+		local nextnum
+		for i,v in pairs(args) do
+			if not ready then
+				if isperiod then
+					newstring ..= v
+					if not nextnum then
+						nextnum = true
+					else
+						ready = true
+					end
+				else
+					newstring ..= v
+					if v == "." then
+						isperiod = true
+					end
+				end
+			end
+		end
+		newstring ..= abbreviations[10]
+	end
+	if value >= 1e+33 and value < 1e+36 then
+		local args = string.split(tostring(value / 1e+30), "")
+		local isperiod = false
+		local ready = false
+		local nextnum
+		for i,v in pairs(args) do
+			if not ready then
+				if isperiod then
+					newstring ..= v
+					if not nextnum then
+						nextnum = true
+					else
+						ready = true
+					end
+				else
+					newstring ..= v
+					if v == "." then
+						isperiod = true
+					end
+				end
+			end
+		end
+		newstring ..= abbreviations[11]
+	end
+	if string.len(newstring) == 0 then
+		newstring = tostring(value)
+	end
+	return newstring
+end
+
+return Abbreviate
