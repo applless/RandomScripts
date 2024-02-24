@@ -218,7 +218,7 @@ Conn = Button.MouseButton1Click:Connect(function()
 		end
 	end)
 	
-	Converted["_TextButton"].Activated:Connect(function()
+	Converted["_TextButton"].MouseButton1Click:Connect(function()
 		Converted["_Saver"].Enabled = false 
 		Run:Set3dRenderingEnabled(true)
 	end)
