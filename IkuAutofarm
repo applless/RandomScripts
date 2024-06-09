@@ -1,13 +1,7 @@
---// 1/9/2024 - added an antisit 
---// 1/7/2024 - changed some stuff dm if broken
-
-
 --[[ 
-
-releasing this as opensource because obfuscation can mess with the performance and shit
-if you skid from this atleast credit me or something
-this is coded poorly btw
-
+    releasing this as opensource because obfuscation can mess with the performance and shit
+    if you skid from this atleast credit me or something
+    this is coded poorly btw
 ]]
 
 if (_G.EXC ~= nil) then
@@ -97,7 +91,6 @@ local UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint")
 local P4 = Instance.new("Frame")
 local UICorner_17 = Instance.new("UICorner")
 local UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint")
-local P29 = Instance.new("Frame")
 local UICorner_18 = Instance.new("UICorner")
 local UIAspectRatioConstraint_18 = Instance.new("UIAspectRatioConstraint")
 local P10 = Instance.new("Frame")
@@ -112,10 +105,8 @@ local UIAspectRatioConstraint_21 = Instance.new("UIAspectRatioConstraint")
 local P5 = Instance.new("Frame")
 local UICorner_22 = Instance.new("UICorner")
 local UIAspectRatioConstraint_22 = Instance.new("UIAspectRatioConstraint")
-local P30 = Instance.new("Frame")
 local UICorner_23 = Instance.new("UICorner")
 local UIAspectRatioConstraint_23 = Instance.new("UIAspectRatioConstraint")
-local P28 = Instance.new("Frame")
 local UICorner_24 = Instance.new("UICorner")
 local UIAspectRatioConstraint_24 = Instance.new("UIAspectRatioConstraint")
 local P7 = Instance.new("Frame")
@@ -349,7 +340,7 @@ MAP.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MAP.BorderSizePixel = 0;
 MAP.Position = UDim2.new(0.5, 0, 0.5, 0)
 MAP.Size = UDim2.new(1, 0, 1, 0)
-MAP.Image = "http://www.roblox.com/asset/?id=14500865029"
+MAP.Image = "http://www.roblox.com/asset/?id=17168506163"
 MAP.ScaleType = Enum.ScaleType.Crop;
 MAP.SliceCenter = Rect.new(100, 100, 100, 100)
 P27.Name = "P-27"
@@ -522,16 +513,7 @@ P4.Size = UDim2.new(0, 8, 0, 8)
 UICorner_17.CornerRadius = UDim.new(1, 0)
 UICorner_17.Parent = P4;
 UIAspectRatioConstraint_17.Parent = P4;
-P29.Name = "P-29"
-P29.Parent = MAP;
-P29.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-P29.BorderColor3 = Color3.fromRGB(0, 0, 0)
-P29.BorderSizePixel = 0;
-P29.Position = UDim2.new(0.487214655, 0, 0.426270217, 0)
-P29.Size = UDim2.new(0, 8, 0, 8)
 UICorner_18.CornerRadius = UDim.new(1, 0)
-UICorner_18.Parent = P29;
-UIAspectRatioConstraint_18.Parent = P29;
 P10.Name = "P-10"
 P10.Parent = MAP;
 P10.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -572,26 +554,8 @@ P5.Size = UDim2.new(0, 8, 0, 8)
 UICorner_22.CornerRadius = UDim.new(1, 0)
 UICorner_22.Parent = P5;
 UIAspectRatioConstraint_22.Parent = P5;
-P30.Name = "P-30"
-P30.Parent = MAP;
-P30.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-P30.BorderColor3 = Color3.fromRGB(0, 0, 0)
-P30.BorderSizePixel = 0;
-P30.Position = UDim2.new(0.507457554, 0, 0.513535917, 0)
-P30.Size = UDim2.new(0, 8, 0, 8)
 UICorner_23.CornerRadius = UDim.new(1, 0)
-UICorner_23.Parent = P30;
-UIAspectRatioConstraint_23.Parent = P30;
-P28.Name = "P-28"
-P28.Parent = MAP;
-P28.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-P28.BorderColor3 = Color3.fromRGB(0, 0, 0)
-P28.BorderSizePixel = 0;
-P28.Position = UDim2.new(0.527700484, 0, 0.513535917, 0)
-P28.Size = UDim2.new(0, 8, 0, 8)
 UICorner_24.CornerRadius = UDim.new(1, 0)
-UICorner_24.Parent = P28;
-UIAspectRatioConstraint_24.Parent = P28;
 P7.Name = "P-7"
 P7.Parent = MAP;
 P7.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -1043,12 +1007,16 @@ task.spawn(function()
 	AntiSit(Player.Character)
 end)
 
+local function distance(pos1, pos2)
+    return (pos1 - pos2).magnitude
+end
+
 task.spawn(function()
 	while true and task.wait() do 
 		if (Shutdown == true) then return end
 		Update()
 		for i,v in pairs(Cashiers:GetChildren()) do 
-			if (i == 15) then 
+			if ( (i == 23) or (i == 15) ) and distance(Vector3.new(-625, 10, -286), v.Head.Position) <= 20 then 
 				v:MoveTo(Vector3.new(-621.948, 24, -286.52))
 				for x,z in pairs(v:GetChildren()) do 
 					if (z:IsA("Part")) or (z:IsA("BasePart")) then 
@@ -1056,7 +1024,7 @@ task.spawn(function()
 						z.Anchored = false 
 					end
 				end
-			elseif (i == 16) then 
+			elseif ( (i == 24) or (i == 16) ) and distance(Vector3.new(-625, 10, -286), v.Head.Position) <= 20 then  -- THIS IS THE GAY ONE
 				v:MoveTo(Vector3.new(-631.948, 24, -286.52))
 				for x,z in pairs(v:GetChildren()) do 
 					if (z:IsA("Part")) or (z:IsA("BasePart")) then 
