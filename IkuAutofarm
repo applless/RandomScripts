@@ -1007,6 +1007,17 @@ task.spawn(function()
 	AntiSit(Player.Character)
 end)
 
+task.spawn(function()
+	while true and task.wait(_G.AutofarmSettings.LogInterval * 60) do
+        local s, e = pcall(function()
+            SendLog(_G.AutofarmSettings.Webhook, {Player.Name, Player.UserId, WALLET.Text, PROFIT.Text, TIMER.Text, BROKEN.Text, "| iku autofarm by @trans"})
+        end)
+        if (e) then 
+            Log("error while sending log:\n"..tostring(e).."\n")
+        end
+	end
+end)
+
 local function distance(pos1, pos2)
     return (pos1 - pos2).magnitude
 end
@@ -1040,19 +1051,6 @@ task.spawn(function()
 			if (Unarresting == nil) then 
 				Unarresting = false
 			end
-		end)
-		
-		task.spawn(function()
-			if (os.time() >= LastLog) then 
-				local s, e = pcall(function()
-					SendLog(_G.AutofarmSettings.Webhook, {Player.Name, Player.UserId, WALLET.Text, PROFIT.Text, TIMER.Text, BROKEN.Text, "| iku autofarm by @trans"})
-				end)
-				if (e) then 
-					Log("error while sending log:\n"..tostring(e).."\n")
-				end
-				LastLog = os.time()+((tonumber(_G.AutofarmSettings.LogInterval)*60) or 60)
-			end
-
 		end)
 		
 		task.spawn(function()
