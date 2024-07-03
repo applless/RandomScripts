@@ -91,14 +91,14 @@ end
 local GetCashier = function()
 	for i,v in pairs(Cashiers:GetChildren()) do 
 		if (i == 15) and (Vector3.new(-625, 10, -286) - v.Head.Position).Magnitude <= 20 then 
-			v:MoveTo(Vector3.new(-619.948, 24, -286.52))
+			v:MoveTo(Vector3.new(-622.948, 24, -286.52))
 			for x,z in pairs(v:GetChildren()) do 
 				if (z:IsA("Part")) or (z:IsA("BasePart")) then 
 					z.CanCollide = false 
 				end
 			end
 		elseif (i == 16) and (Vector3.new(-625, 10, -286) - v.Head.Position).Magnitude <= 20 then
-			v:MoveTo(Vector3.new(-632.948, 24, -286.52))
+			v:MoveTo(Vector3.new(-629.948, 24, -286.52))
 			for x,z in pairs(v:GetChildren()) do 
 				if (z:IsA("Part")) or (z:IsA("BasePart")) then 
 					z.CanCollide = false 
@@ -137,7 +137,7 @@ task.spawn(function()
 				Player.Backpack.Combat.Parent = Player.Character 
 				task.wait(0.5)
 			end
-			To( (Cashier.Head.CFrame+Vector3.new(0, -1.5, 0)) * CFrame.Angles(math.rad(90), 0, 0) ) 
+			To( (Cashier.Head.CFrame+Vector3.new(0, -2.5, 0)) * CFrame.Angles(math.rad(90), 0, 0) ) 
 			task.wait()
 			Player.Character.Combat:Activate()
 		until (Cashier.Humanoid.Health <= 0)
