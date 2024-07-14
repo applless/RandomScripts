@@ -5,7 +5,7 @@ task.wait(1)
 
 repeat task.wait(.1) until game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character:FindFirstChild("FULLY_LOADED_CHAR")
 
-local a=game:GetService("ReplicatedStorage"):WaitForChild("MainEvent", 9e9);local b={"CHECKER_1","TeleportDetect","OneMoreTime"}local c;c=hookmetamethod(game,"__namecall",function(...)local d={...}local self=d[1]local e=getnamecallmethod()local f=getcallingscript()if e=="FireServer"and self==a and table.find(b,d[2])then return end return c(...)end)
+local a=game:GetService("ReplicatedStorage"):WaitForChild("MainEvent", 9e9);local b={"CHECKER_1","TeleportDetect","OneMoreTime"}local c;c=hookmetamethod(game,"__namecall",function(...)local d={...}local self=d[1]local e=getnamecallmethod() if e=="FireServer"and self==a and table.find(b,d[2])then return end return c(...)end)
 
 local ScreenGui = Instance.new("ScreenGui")
 local Back = Instance.new("Frame")
