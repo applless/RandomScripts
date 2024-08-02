@@ -1026,25 +1026,14 @@ task.spawn(function()
 	while true and task.wait() do 
 		if (Shutdown == true) then return end
 		Update()
-		for i,v in pairs(Cashiers:GetChildren()) do 
-			if ( (i == 23) or (i == 15) ) and distance(Vector3.new(-625, 10, -286), v.Head.Position) <= 20 then 
-				v:MoveTo(Vector3.new(-621.948, 24, -286.52))
-				for x,z in pairs(v:GetChildren()) do 
-					if (z:IsA("Part")) or (z:IsA("BasePart")) then 
-						z.CanCollide = false 
-						z.Anchored = false 
-					end
-				end
-			elseif ( (i == 24) or (i == 16) ) and distance(Vector3.new(-625, 10, -286), v.Head.Position) <= 20 then  -- THIS IS THE GAY ONE
-				v:MoveTo(Vector3.new(-631.948, 24, -286.52))
-				for x,z in pairs(v:GetChildren()) do 
-					if (z:IsA("Part")) or (z:IsA("BasePart")) then 
-						z.CanCollide = false 
-						z.Anchored = false 
-					end
-				end
-			end
-		end
+           
+        for i,v in pairs(Cashiers:GetChildren()) do 
+            if (math.round(v.Head.Position.X) == tonumber(-627)) then
+                v:PivotTo(CFrame.new(-629.948, 24, -286.52))
+            elseif (math.round(v.Head.Position.X) == tonumber(-624)) then
+                v:PivotTo(CFrame.new(-622.948, 24, -286.52))
+            end
+        end
 		
 		pcall(function()
 			Unarresting = Player.Character.BodyEffects.Cuff.Value
