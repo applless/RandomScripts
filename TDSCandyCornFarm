@@ -1,0 +1,171 @@
+local Player = game:GetService("Players").LocalPlayer
+local PGui = Player.PlayerGui 
+
+local Cam = workspace.Camera
+
+local Storage = game:GetService("ReplicatedStorage")
+local Func = Storage.RemoteFunction
+
+local Towers = workspace.Towers
+
+local State = nil 
+
+pcall(function() UserSettings().GameSettings.MasterVolume = 0 end)
+pcall(function() settings().Rendering.QualityLevel = "Level01" end)
+
+Player.Idled:Connect(function()
+	for i = 1, 10 do 
+		game:GetService("VirtualUser"):Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame) 
+		task.wait(0.2) 
+		game:GetService("VirtualUser"):Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+		task.wait(0.2)
+	end
+end)
+
+for i,v in pairs(Storage.StateReplicators:GetChildren()) do 
+    if (v:GetAttribute("TimeScale")) then
+        State = v
+    end
+end 
+
+local Positions = {
+    Vector3.new(6.757826805114746, 0.012428145855665207, 1.652524471282959),
+    Vector3.new(6.9658098220825195, 0.012428738176822662, -1.3737430572509766),
+    Vector3.new(-0.4311685562133789, 0.012429822236299515, -7.802929878234863),
+    Vector3.new(-1.0863771438598633, 0.012429814785718918, -4.308915138244629),
+    Vector3.new(2.5440263748168945, 0.012429088354110718, -6.207963943481445)   
+}
+
+local Place = function()
+	return Func:InvokeServer(
+		"Troops", 
+		"Place", 
+		"Crook Boss", 
+		{
+			["Rotation"] = CFrame.new(0, 0, 0) * CFrame.Angles(-0, 0, -0),
+			["Position"] = Positions[math.random(1, 5)]
+		}
+	)
+end 
+
+local Skip = function()
+	Func:InvokeServer(
+		"Voting", 
+		"Skip"
+	)
+end 
+
+local Sell = function(Tower)
+    if (typeof(Tower) ~= "Instance") then return end
+    Func:InvokeServer(
+        "Troops", 
+        "Sell", 
+        {
+            ["Troop"] = Tower
+        }
+    )
+end
+
+local UpgradeRandom = function()
+	local All = Towers:GetChildren()
+
+	if (#All > 0) then 
+		Func:InvokeServer(
+			"Troops", 
+			"Upgrade", 
+			"Set", 
+			{
+				["Troop"] = All[math.random(1, #All)]
+			}
+		)
+	end
+end 
+
+local Upgrade = function(Tower)
+	if (typeof(Tower) ~= "Instance") then return end
+	Func:InvokeServer(
+		"Troops", 
+		"Upgrade", 
+		"Set", 
+		{
+			["Troop"] = Tower
+		}
+	)
+end
+
+local GetLevel = function(Tower)
+	if (typeof(Tower) ~= "Instance") then return end
+	return (tonumber(Tower:WaitForChild("TowerReplicator"):GetAttribute("Upgrade")))
+end 
+
+local GetWave = function()
+    return (tonumber(State:GetAttribute("Wave")) or 1)
+end
+
+local GetTime = function()
+    return (Storage.State.Timer.Time.Value)
+end 
+
+local GetCandy = function()
+    for i,v in pairs(PGui:GetDescendants()) do 
+        if (v:IsA("TextLabel")) and (v.Name == "text") and (v.Parent.Name == "Hexscape Event") then 
+            return (string.gsub(v.Text, ",", "") or 1) 
+        end
+    end 
+end 
+
+task.spawn(function()
+	while true and task.wait(3) do 
+		Skip()
+	end 
+end)
+
+task.spawn(function()
+	while true and task.wait(0.02) do 
+        if (GetWave() < 7) then 
+            local Tower = Place()
+            if (typeof(Tower) == "Instance") then 
+                repeat 
+                    Upgrade(Tower)
+                    task.wait(math.random(1, 3)/10)
+                until (GetLevel(Tower) >= 1) or (Tower == nil)
+                task.wait(0.1)
+            else 
+                UpgradeRandom()
+                task.wait()
+            end
+        else 
+            task.wait(0.33)
+
+            if (GetTime() <= 30) then 
+                for i,v in pairs(Towers:GetChildren()) do 
+                    Sell(v)
+                    task.wait()
+                end
+            end 
+        end
+	end 
+end)
+
+task.spawn(function()
+    while true and task.wait() do 
+        task.spawn(function()
+            Cam.CameraType = Enum.CameraType.Scriptable
+            Cam.CFrame = CFrame.new(Vector3.new(5, 40, 0), Vector3.new(5, 0, 0))
+        end)
+
+        pcall(function()
+            for i,v in pairs(workspace.Pickups:GetChildren()) do 
+                if (v.Name == "CandyCorn") and (Player.Character.HumanoidRootPart.Position - v.Position).Magnitude <= 65 then 
+                    OldPos = Player.Character.HumanoidRootPart.CFrame
+
+                    Player.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position) + Vector3.new(0, 5, 0)
+                    task.wait(0.33)
+
+                    Player.Character.HumanoidRootPart.CFrame = OldPos 
+                    task.wait(0.2)
+                end 
+            end  
+        end)
+    end 
+end)
